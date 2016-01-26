@@ -1,0 +1,10 @@
+{
+	"define": {
+	},
+	"interceptors": {
+		"audit_before": {
+			"pattern": ["/audit/", "/edit/"],
+			"tag": ""
+		}
+	}
+}

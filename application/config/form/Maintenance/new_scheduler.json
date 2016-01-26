@@ -1,0 +1,38 @@
+[
+    {
+        "field": "year",
+        "label": "Year"
+    },
+    {
+        "field": "month",
+        "label": "Month"
+    },
+        {
+        "field": "day",
+        "label": "Day"
+    },
+        {
+        "field": "hour",
+        "label": "Hour"
+    },
+            {
+        "field": "minute",
+        "label": "Minute"
+    },
+            {
+        "field": "second",
+        "label": "Second"
+    },
+    {
+        "field": "week",
+        "label": "Week"
+    },
+    {
+        "field": "task",
+        "label": "Task"
+    },
+    {
+        "field": "interval",
+        "label": ""
+    }
+]

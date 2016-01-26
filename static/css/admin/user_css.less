@@ -1,0 +1,57 @@
+@import 'admin_def';
+@import 'admin_fun';
+
+.init_admin_user_res(@screen-width) {
+	.admin_res(@screen-width);
+	.admin_user_res(@screen-width);
+}
+
+.admin_user_res(@screen-width) {	
+	.container {
+		& > .response-row { 
+			.panel-body {
+				padding: 0;
+			}
+		}
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		#main {
+			.content {
+				.workbench {
+					.admin_toolbar_res(@screen-width);	
+					i {
+							.res(margin-left, 20px);
+							.res(font-size, 25px);
+							color:#6f767e;
+							vertical-align: bottom;
+					}
+										
+				}		
+			}
+		}
+		// .captive_toolbar_res(@screen-width);
+		.scrollcontent {
+			.scrollcontent-inner {
+				.panel-body {
+                                                    
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.init_admin_user_res(1280px);			
+}
+
+@media screen and (min-width: 1440px) {
+	.init_admin_user_res(1440px);	
+}
+
+@media screen and (min-width: 1920px) {
+	.init_admin_user_res(1920px);					
+}

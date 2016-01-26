@@ -1,0 +1,15 @@
+{
+    "columns": [
+        { "data": "uid", "title" : "SNS ID", "refer" : "id", "searchable": false},
+        { "data": "provider", "title":"SNS Type", "searchable": false},
+        { "data": "username", "title":"User Name"},
+        { "data": "name", "title":"Serial ID"},
+        { "data": "create_time", "title":"Create Time", "searchable": false}
+    ],
+    "customized_query": {
+        "query": "select b.id,sa.provider,sa.uid,g.name,u.username,b.create_time from $$blacklists as b inner join $$sns_accounts as sa on b.sns_account_id=sa.id inner join $$users as u on sa.user_id=u.id inner join $$devices as d on d.owner_id=u.id inner join $$gateways as g on g.id=d.gateway_id where u.user_type='-1'",
+        "dbtotal_count_query": "select count(b.id) as count from $$blacklists as b inner join $$sns_accounts as sa on b.sns_account_id=sa.id inner join $$users as u on sa.user_id=u.id inner join $$devices as d on d.owner_id=u.id inner join $$gateways as g on g.id=d.gateway_id where u.user_type='-1'",
+        "total_count_query": "select count(b.id) as count from $$blacklists as b inner join $$sns_accounts as sa on b.sns_account_id=sa.id inner join $$users as u on sa.user_id=u.id inner join $$devices as d on d.owner_id=u.id inner join $$gateways as g on g.id=d.gateway_id where u.user_type='-1'"
+    },
+    "selectType": "multi"
+}

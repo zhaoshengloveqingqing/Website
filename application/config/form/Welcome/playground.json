@@ -1,0 +1,11 @@
+[
+	{
+		"field": "test.ip_addr",
+		"label": "IP Address",
+		"mask": "9[99].9[99].9[99].9[99]"
+	},
+	{
+		"field": "test.username",
+		"label": "Username"
+	}
+]

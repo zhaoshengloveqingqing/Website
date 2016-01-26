@@ -1,0 +1,61 @@
+@import 'button_def';
+@import 'button_fun';
+
+.btn_res(@screen-width) {
+	.pinet-btn-green, .pinet-btn-grey, .pinet-btn-blue, .pinet-btn-orange, .pinet-btn-white, .pinet-btn-cyan {
+		.button-variant();
+	}
+
+	.pinet-btn-white {
+		.button-variant(#000000);
+	}
+
+	.pinet-btn-delete {
+		.button-variant(#c6cacc, none);
+	}
+
+	[class*=switch-box] {
+		.switch-box-variant();
+	}
+}
+
+.pinet-btn-blue {
+	.button-color(@pinet-blue, @pinet-blue-hover, @pinet-blue-active, @btn-box-shadow-blue);
+}
+
+.pinet-btn-green {
+	.button-color(@pinet-green, @pinet-green-hover, @pinet-green-active, @btn-box-shadow-green);
+}
+
+.pinet-btn-grey {
+	.button-color(@pinet-grey, @pinet-grey-hover, @pinet-grey-active, @btn-box-shadow-grey);
+}	
+
+.pinet-btn-orange {
+	.button-color(@pinet-orange, @pinet-orange-hover, @pinet-orange-active, @btn-box-shadow-orange);
+}
+
+.pinet-btn-cyan {
+	.button-color(@pinet-cyan, @pinet-cyan-hover, @pinet-cyan-active, @btn-box-shadow-cyan);
+}
+
+.pinet-btn-white {
+	.button-color(@pinet-white, @pinet-white-hover, @pinet-white-active);
+}
+
+.pinet-btn-delete {
+	.button-color(@pinet-delete, @pinet-delete-hover, @pinet-delete-active);
+}
+
+.switch-box-green {
+	.switch-box-color(@pinet-green, #dbfbe6, @border-color:#55d684);
+}
+
+.switch-box-cyan {
+	.switch-box-color(@pinet-cyan, #dbfbe6, @border-color:#1dd2af);
+}
+
+.switch-box-blue {
+	.switch-box-color(@pinet-blue, #bee7f9, @border-color:#1d99d2);
+}
+

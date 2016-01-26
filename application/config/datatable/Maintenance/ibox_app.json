@@ -1,0 +1,14 @@
+{
+    "columns": [
+        { "data": "id", "title" : "", "searchable": false},
+        { "data": "gateway_id", "title" : ""},
+        { "data": "item", "title":"" },
+        { "data": "value", "title":"", "searchable": false}
+    ],
+    "customized_query": {
+        "query": "select * from $$configs as c where c.item='apps'",
+        "dbtotal_count_query": "select count(id) as count from $$configs as c where c.item='apps'",
+        "total_count_query": "select count(id) as count from $$configs as c where c.item='apps'"
+    },
+    "selectType": "multi"
+}

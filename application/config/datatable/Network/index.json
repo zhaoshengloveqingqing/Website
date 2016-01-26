@@ -1,0 +1,18 @@
+{
+    "columns": [
+        { "data": "serial", "title" : "Serial ID", "refer" : "id"},
+        { "data": "username", "title":"Owner" },
+        { "data": "sys_version", "title":"Version", "searchable": false},
+        { "data": "deadline", "title":"Deadline", "searchable": false},
+        { "data": "incoming", "title":"Download", "searchable": false},
+        { "data": "outgoing", "title":"Upload", "searchable": false},
+        { "data": "sys_load", "title":"CPU", "searchable": false},
+        { "data": "sys_memfree", "title":"Memory", "searchable": false}
+    ],
+    "customized_query": {
+        "query": "select g.id,g.serial,g.deadline,u.username,h.`sys_version`,h.`sys_memfree`, concat(h.`sys_load`, '%') as sys_load,n.incoming, n.outgoing from $$gateways as g inner join $$users as u on g.owner_id=u.id inner join $$heart_beats as h on h.gateway_id=g.id inner join (select gateway_id, sum(incoming) as incoming, sum(outgoing) as outgoing from $$device_network_counters group by gateway_id) as n on g.id = n.gateway_id where (h.id=(select max(id) from $$heart_beats where $$heart_beats.gateway_id=g.id) and u.user_type <>'-1')",
+        "dbtotal_count_query": "select count(distinct g.id) as count from $$gateways as g inner join $$users as u on u.id=g.owner_id left join $$heart_beats as h on h.gateway_id=g.id where u.user_type <> '-1'",
+        "total_count_query": "select count(distinct g.id) as count from $$gateways as g inner join $$users as u on u.id=g.owner_id left join $$heart_beats as h on h.gateway_id=g.id where u.user_type <>'-1'"
+    },
+    "selectType": "single"
+}

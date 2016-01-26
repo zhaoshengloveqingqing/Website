@@ -1,0 +1,76 @@
+@import 'captive_def';
+@import 'captive_fun';
+
+.init_captive_add_res(@screen-width) {
+	.admin_res(@screen-width);
+	.captive_add_res(@screen-width);
+}
+
+.captive_add_res(@screen-width) {	
+	.container {
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		#main {
+			.content {
+				.workbench {
+					.captive_toolbar_res(@screen-width);						
+				}		
+			}
+		}
+
+		.captive_clear_scrollcontent_margin_right-fun();
+
+		.scrollcontent {
+			.scrollcontent-inner {
+				.panel-body {
+					padding: 35px 50px 85px;
+					.form-group.control-group {
+						.res(padding-bottom, 30px);
+						.control-label {
+							padding-left:0;
+							.res(font-size,25px);
+						}
+						.pinet-form-input {
+								.res(height, 80px);
+							select {
+								.res(height, 80px);
+							}
+							textarea {
+								text-align: left;
+								.res(height, 165px);
+								.res(padding-left, 0px);
+								box-shadow: 0 0 10px #f1f1f1;
+								border-radius: 5px;
+								border-color: #ccc;	
+							}
+						}
+					}
+					.row{
+						.form-group.control-group {
+							.control-label {
+								.res(margin-right, 10px);
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.init_captive_add_res(1280px);			
+}
+
+@media screen and (min-width: 1440px) {
+	.init_captive_add_res(1440px);	
+}
+
+@media screen and (min-width: 1920px) {
+	.init_captive_add_res(1920px);					
+}

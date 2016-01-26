@@ -1,0 +1,4 @@
+#!/bin/sh
+args=$*
+rm -f $args
+git checkout $args

@@ -1,0 +1,96 @@
+@import 'account_def';
+@import 'account_fun';
+
+.init_account_summary_details_res(@screen-width) {
+	.admin_res(@screen-width);
+	.account_summary_details_res(@screen-width);
+}
+
+.word-break {
+	word-wrap:break-word; 
+	overflow:hidden;
+}
+
+.account_summary_details_res(@screen-width) {	
+	.container {
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		#main {
+			.content {
+				.workbench {
+					.account_toolbar_res(@screen-width);					
+				}		
+			}
+		}
+		// .captive_toolbar_res(@screen-width);
+		.scrollcontent {
+			.scrollcontent-inner {
+				.panel-body {
+                                                                        padding: 0px 55px 40px;
+                                                                        position: relative;
+                                                                        .absolute{
+                                                                        	position: absolute;
+				                  	top:0;
+				                   	right:70px;
+				                   	background-color: #f0f0f0;
+						display: inline-block;
+				                    	.res(width,343px);
+						.res(height,344px);
+						.res(line-height,344px);
+						text-align: center;
+                                                                                  	.img {
+							.res(width,255px);
+							.res(height,255px);
+                                                                        	}
+                                                                        }
+                                                                        .form-group.control-group  {
+                                                                             .res(height, 115px);
+                                                                              .res(line-height, 115px);
+                                                                             .res(padding-left, 0px);
+                                                                        	.res(padding-right, 0px);
+						border-bottom: 1px solid #f0f0f0;
+						.res(margin-bottom, 0px);
+						.control-label {
+							color:#6f767e;
+							.res(font-size, 25px);
+							.res(padding-left, 0px);
+							text-align: left;
+							.res(font-weight, 600);
+							.res(margin-bottom, 0px);
+						}
+						.pinet-form-input{
+							 .res(height, 115px);
+                                                                         		 .res(line-height, 115px);
+							.res(font-size, 22px);
+							.res(padding-left, 80px);
+							&:first-child {
+								.res(font-weight, 600);
+							}
+						}
+						&:last-child {
+							border-bottom: none;
+							.res(padding-bottom, 0px);
+						}	
+					}
+				
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.init_account_summary_details_res(1280px);			
+}
+
+@media screen and (min-width: 1440px) {
+	.init_account_summary_details_res(1440px);	
+}
+
+@media screen and (min-width: 1920px) {
+	.init_account_summary_details_res(1920px);					
+}

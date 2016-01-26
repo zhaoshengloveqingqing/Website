@@ -1,0 +1,302 @@
+@import 'signin_def';
+@import 'signin_fun';
+
+.cwvs(@w, @width) {
+	@cwvs: @w / @mobile-max-width * @width
+}
+
+body {
+	font-family: 'helvetica neue','helvetica','Arial','Microsoft YaHei';
+}
+
+.responsive(@width) {
+	@container-width: 2726 / 2880 * @width + 0px;	
+	body.pc {
+		background-color: #FFF;
+		header {
+			background: url('../../../index.php/responsive/size/@{width}/signin-bg.jpg') no-repeat top center;		
+			h1 {
+				padding-top: 335 / 2880 * @width + 0px;
+				padding-left: 60 / 2880 * @width + 0px;
+				margin: 0px;
+				font-size: 87 / 2880 * @width + 0px;
+				color: #fff;
+				span {
+					display: block;
+					font-size: 94 / 2880 * @width + 0px;
+					padding-bottom: 50 / 2880 * @width + 0px;
+				}
+			}
+			margin-bottom: 0px;
+			padding-bottom: 40 / 2880 * @width + 0px;
+		}	
+		.container {
+			width: 2726 / 2880 * @width + 0px;
+			padding-top: 30 / 2880 * @width + 0px;
+			section {
+				#content-bg {
+					width: 100%;
+					background: #fff;
+					margin: 0;
+					#content {
+						width: 2520 / 2880 * @width + 0px;
+						overflow-y: auto;
+						margin: 0px auto;
+						padding-top: 52 / 2880 * @width + 0px;
+						padding-bottom: 52 / 2880 * @width + 0px;
+						p {
+							background-color: #fff;
+							margin-bottom: 0px;
+							position: relative;
+							font-size: 40 / 2880 * @width + 0px;
+							word-break: break-all;
+							word-wrap: break-word;	
+							overflow: hidden;	
+							picture {
+								display: inline-block;
+								float: left;
+								margin-top: 10 / 2880 * @width + 0px;
+							 	padding: 0;
+								margin-right: 30 / 2880 * @width + 0px;
+								img {
+									width: 100%;
+								}
+							}								 
+						}						
+					}
+				}
+			}					
+		}
+		footer {
+			margin: 0px auto;
+			width: 2726 / 2880 * @width + 0px;
+			#legal {
+				font-size: 30 / 2880 * @width + 0px;
+				text-align: right;
+				color: rgba(0, 0, 0, 0.5);
+				padding-bottom: 10 / 2880 * @width + 0px;
+				padding-right: 0;
+				a {
+					padding-left: 10 / 2880 * @width + 0px;
+					figure {
+						display: inline-block;
+					}
+				}
+			}
+			#ads {
+				a {
+					padding: 0px;
+					display: block;
+				}
+			}
+		}		
+	}
+}
+
+.mobile_responsive(@width) {
+	@content-p-width : 685 / @mobile-max-width * @width ;
+	body.mobile{
+		background-color: #FFF;
+		header {
+			background: url('../../../index.php/responsive/size/@{width}/signin-bg.jpg') no-repeat top center;
+			h1 {
+				padding-top: 55 / @mobile-max-width * @width + 0px;
+				padding-left: 0;
+				margin: 0px;
+				font-size: 33 / @mobile-max-width * @width + 0px;
+				color: #fff;
+				span {
+					display: block;
+					font-size: 33 / @mobile-max-width * @width + 0px;
+					padding-bottom: 17 / @mobile-max-width * @width + 0px;
+				}
+			}
+			margin-bottom: 0px;
+			padding-bottom: 49 / @mobile-max-width * @width + 0px;
+		}	
+		.container {
+			padding-top: 27 / @mobile-max-width * @width + 0px;
+			section {
+				#content-bg {
+					width: 100%;
+					background: #fff;
+					margin: 0;
+					text-align: center;
+					#content {
+						overflow-y: auto;
+						margin: 0px auto;
+						position: relative;
+						margin-top: 18 / @mobile-max-width * @width + 0px;
+						p {
+							background-color: #fff;
+							margin-bottom: 0px;
+							position: relative;
+							font-size: 30 / @mobile-max-width * @width + 0px;
+							word-break: break-all;
+							word-wrap: break-word;	
+							overflow: hidden;	
+							text-align: left;
+							picture {
+								display: block;
+								padding: 0;
+								img {
+									width: 100%;
+								}
+							}								 
+						}						
+					}
+				}
+			}
+		}
+	}
+	footer {
+		#legal {
+			font-size: (16 / @mobile-max-width) * @width + 0px;
+			text-align: right;
+			color: rgba(0, 0, 0, 0.5);
+			padding-bottom: 10 / @mobile-max-width * @width + 0px;
+			padding-right: 20 / @mobile-max-width * @width + 0px;
+			margin-right: 0;
+			a {
+				padding-left: (10 / @mobile-max-width) * @width + 0px;
+				padding-right: 10 / @mobile-max-width * @width + 0px;
+				figure {
+					display: inline-block;
+				}
+			}
+		}
+		#ads {
+			margin: 0;
+			a {
+				padding: 0px;
+				display: block;
+				img {
+					width: 100%;
+				}
+			}
+		}				
+	}							
+}
+
+@media (min-width: 320px) {
+	.mobile_responsive(320);
+	.container {;
+		section {
+			#content-bg {
+				#content {
+					.col-1280-12 {
+						padding: 15 / @mobile-max-width * 320 + 0px;
+					}						
+				}
+			}
+		}
+	}	
+}
+
+@media (min-width: 480px) {
+	.mobile_responsive(480);
+}
+
+@media (min-width: 481px) {
+	body.mobile{
+		header {
+			background: url('../../../index.php/responsive/size/640/signin-bg.jpg') no-repeat;
+		}
+	}
+}
+
+@media (min-height: 1px) {
+	body.mobile{
+		header {
+			background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+		}
+	}	
+}
+
+@media (min-width: 640px) {
+	.mobile_responsive(640);
+}
+
+@media (min-width: 641px) {
+	body.mobile{
+		header {
+			background: url('../../../index.php/responsive/size/720/signin-bg.jpg') no-repeat;
+		}
+	}
+}
+
+@media (min-height: 1px) {
+	body.mobile{
+		header {
+			background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+		}
+	}	
+}
+
+@media (min-width: 720px) {
+	.mobile_responsive(720);
+}
+
+@media (min-width: 721px) {
+	body.mobile{
+		header {
+			background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+		}
+	}
+}
+
+@media (min-height: 1px) {
+	body.mobile{
+		header {
+			background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+		}
+	}	
+}
+
+@media (min-width: 1280px) {
+	.responsive(1280);
+}
+
+@media (min-width: 1281px) {
+	body.pc {
+		header {
+			background: url('../../../index.php/responsive/size/1440/signin-bg.jpg') no-repeat top center;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.responsive(1440);
+	body.pc {
+		header {
+			h1 {
+				padding-top: 300 / 2880 * 1440 + 0px;
+				padding-left: 0 / 2880 * 1280 + 0px;	
+				span {
+					padding-bottom: 36 / 2880 * 1440 + 0px;
+				}					
+			}
+		}
+	}
+}
+
+@media (min-width: 1441px) {
+	body.pc {
+		header {
+			background: url('../../../index.php/responsive/size/1920/signin-bg.jpg') no-repeat top center;
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+	.responsive(1920);
+}
+
+@media (min-width: 1921px) {
+	body.pc {
+		header {
+			background: url('../../../index.php/responsive/size/normal/signin-bg.jpg') no-repeat top center;
+		}
+	}
+}
+

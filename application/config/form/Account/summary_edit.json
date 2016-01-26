@@ -1,0 +1,66 @@
+[
+    {
+        "field": "id",
+        "label": ""
+    },
+    {
+        "field": "username",
+        "label": "Username"
+    },
+	{
+		"field": "email_address",
+		"label": "Email"
+	},
+	{
+		"field": "last_name",
+		"label": "Last Name"
+	},	
+	{
+		"field": "first_name",
+		"label": "First Name"
+	},
+	{
+		"field": "birthday",
+		"label": "Date of Birth"
+	},
+	{
+		"field": "sex",
+		"label": "Sex"
+	},
+	{
+		"field": "mobile",
+		"label": "Phone Number"
+	},
+	{
+		"field": "contact_company",
+		"label": "Company"
+	},	
+	{
+		"field": "contact_street",
+		"label": "Street"
+	},
+		{
+		"field": "contact_city",
+		"label": "City"
+	},
+	{
+		"field": "contact_province",
+		"label": "Province/State"
+	},
+	{
+		"field": "contact_postalcode",
+		"label": "Post Code"
+	},	
+	{
+		"field": "contact_profile",
+		"label": "User Info"
+	},
+    {
+        "field": "userfile",
+        "label": "Test"
+    },
+    {
+        "field": "operate_type",
+        "label": ""
+    }
+]

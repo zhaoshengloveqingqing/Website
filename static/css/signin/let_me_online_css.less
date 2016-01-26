@@ -1,0 +1,331 @@
+@import 'signin_def';
+@import 'signin_fun';
+
+.cw(@w, @width) {
+	@cw: @w / 2880 * @width + 0px
+}
+
+.cwv(@w, @width) {
+	@cwv: @w / 2880 * @width
+}
+
+.cwvs(@w, @width) {
+	@cwvs: @w / @mobile-max-width * @width
+}
+
+body {
+    font-family: 'helvetica neue','helvetica','Arial','Microsoft YaHei';
+}
+
+.responsive(@width) {
+	body.pc {
+		background: url('../../../index.php/responsive/size/@{width}/signin-bg.jpg') no-repeat top center;
+		.container {
+			width: 2726 / 2880 * @width + 0px;
+			.cw(30, @width);
+			padding-top: @cw;
+			header {
+				h1 {
+					padding-top: 335 / 2880 * @width + 0px;
+					padding-left: 60 / 2880 * @width + 0px;
+					margin: 0px;
+					font-size: 87 / 2880 * @width + 0px;
+					color: #fff;
+					span {
+						display: block;
+						font-size: 94 / 2880 * @width + 0px;
+						padding-bottom: 50 / 2880 * @width + 0px;
+					}
+				}
+				.cw(140, @width);
+				margin-bottom: @cw;
+			}
+			section {
+				ul#buttons {
+					margin: auto;
+					width: 2324 / 2880 * @width + 0px;
+					overflow: hidden;
+					li {
+						a {
+							text-align: center;
+							display: inline-block;
+							.cw(460, @width);
+							width: @cw;
+							height: 360 / 2880 * @width + 0px;
+							color: #fff;
+							font-size: 45 / 2880 * @width + 0px;
+							padding-top: 250 / 2880 * @width + 0px;
+							text-decoration: none;
+						}
+
+						.cwv(460, @width);
+						a#wechat_button:hover {
+							background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online-wechat-active.png');
+						}
+						a#weibo_button:hover {
+							background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online-weibo-active.png');
+						}
+						a#qq_button:hover {
+							background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online-qq-active.png');
+						}
+						a#yixin_button:hover {
+							background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online-yixin-active.png');
+						}
+
+						a#wechat_button {
+							background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online-wechat.png');
+						}
+						a#weibo_button {
+							background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online-weibo.png');
+						}
+						a#qq_button {
+							background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online-qq.png');
+						}
+						a#yixin_button {
+							background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online-yixin.png');
+						}
+					}
+				}
+			}
+			footer {
+				position: fixed;
+				margin: 0px auto;
+				bottom: 0px;
+				width: 2726 / 2880 * @width + 0px - 30;
+				#legal {
+					.cw(30, @width);
+					font-size: @cw;
+					text-align: right;
+					color: rgba(255, 255, 255, 0.5);
+					padding-bottom: 10 / 2880 * @width + 0px;
+					a {
+						padding-left: 10 / 2880 * @width + 0px;
+						padding-right: 10 / 2880 * @width + 0px;
+						figure {
+							display: inline-block;
+						}
+					}
+				}
+				#ads {
+					a {
+						padding: 0px;
+						display: block;
+						img {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.mobile_responsive(@width) {
+	body.mobile{
+        background: url('../../../index.php/responsive/size/@{width}/signin-bg.jpg') no-repeat top center;
+        background-attachment: fixed;	
+        .container {
+        	padding-top: 18 / @mobile-max-width * @width + 0px;
+            header {
+                h1 {
+                    padding-top: 55 / @mobile-max-width * @width + 0px;
+                    padding-left: 0;
+                    margin: 0px;
+                    font-size: 30 / @mobile-max-width * @width + 0px;
+                    color: #fff;
+                    span {
+                        display: block;
+                        font-size: 33  / @mobile-max-width * @width + 0px;
+                        padding-bottom: 17 / @mobile-max-width * @width + 0px;
+                    }
+                }
+                margin-bottom: 0px;
+                padding-bottom: 49 / @mobile-max-width * @width + 0px;
+            } 
+			section {
+				ul#buttons {
+					margin: auto;
+					width: 683 / @mobile-max-width * @width + 0px;
+					overflow: hidden;
+					li {
+						padding-bottom: 54/ @mobile-max-width * @width + 0px;
+						a {
+							text-align: center;
+							display: inline-block;
+							width: 190 / @mobile-max-width * @width + 0px;
+							height: 190 / @mobile-max-width * @width + 0px;
+							color: #fff;
+							font-size: 23 / @mobile-max-width * @width + 0px;
+							padding-top: 216 / @mobile-max-width * @width + 0px;
+							text-decoration: none;
+							text-shadow:0px 0px 10px rgba(0,0,0,.5);
+						}
+
+						.cwvs(190, @width);
+						a#wechat_button:hover {
+							background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-wechat-active-mobile.png');
+							background-repeat: no-repeat;						
+						}
+						a#weibo_button:hover {
+							background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-weibo-active-mobile.png');
+							background-repeat: no-repeat;						
+						}
+						a#qq_button:hover {
+							background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-qq-active-mobile.png');
+							background-repeat: no-repeat;												
+						}
+						a#yixin_button:hover {
+							background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-yixin-active-mobile.png');
+							background-repeat: no-repeat;										
+						}
+
+						a#wechat_button {
+							background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-wechat-mobile.png');
+							background-repeat: no-repeat;	
+							float: right;	
+							margin-right: 20 / @mobile-max-width * @width + 0px;																	
+						}
+						a#weibo_button {
+							background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-weibo-mobile.png');
+							background-repeat: no-repeat;
+							margin-left: 20 / @mobile-max-width * @width + 0px;												
+						}
+						a#qq_button {
+							background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-qq-mobile.png');
+							background-repeat: no-repeat;
+							float: right;	
+							margin-right: 20 / @mobile-max-width * @width + 0px;																		
+						}
+						a#yixin_button {
+							background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-yixin-mobile.png');
+							background-repeat: no-repeat;												
+							margin-left: 20 / @mobile-max-width * @width + 0px;
+						}
+					}
+				}
+			}             
+			footer {
+				position: fixed;
+				right: 0;
+				bottom: 0px;
+				#legal {
+					font-size: (16 / @mobile-max-width) * @width + 0px;
+					color: #fff;
+					text-align: right;
+					color: rgba(255, 255, 255, 0.5);
+					padding-bottom: (10 / @mobile-max-width) * @width + 0px;
+					padding-right: 20 / @mobile-max-width * @width + 0px;
+					margin-right: 0;
+					a {
+						padding-left: (10 / @mobile-max-width) * @width + 0px;
+						padding-right: 10 / @mobile-max-width * @width + 0px;
+						figure {
+							display: inline-block;
+						}
+					}
+				}
+				#ads {
+					padding: 0px;
+					img {
+						width: 100%;
+					}					
+				}				
+			}                   	
+        }
+	}
+}
+
+@media (min-width: 320px) {
+	.mobile_responsive(320);
+}
+
+@media (min-width: 480px) {
+	.mobile_responsive(480);
+}
+
+@media (min-width: 481px) {
+	body.mobile{
+		background: url('../../../index.php/responsive/size/640/signin-bg.jpg') no-repeat;
+	}
+}
+
+@media (min-height: 1px) {
+	body.mobile{
+		background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+	}	
+}
+
+@media (min-width: 640px) {
+	.mobile_responsive(640);
+}
+
+@media (min-width: 641px) {
+	body.mobile{
+		background: url('../../../index.php/responsive/size/720/signin-bg.jpg') no-repeat;
+	}
+}
+
+@media (min-height: 1px) {
+	body.mobile{
+		background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+	}	
+}
+
+@media (min-width: 720px) {
+	.mobile_responsive(720);
+}
+
+@media (min-width: 721px) {
+	body.mobile{
+		background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+	}
+}
+
+@media (min-height: 1px) {
+	body.mobile{
+		background: url('../../../index.php/responsive/size/1800/signin-bg.jpg') no-repeat;
+	}	
+}
+
+@media (min-width: 1280px) {
+	.responsive(1280);	
+}
+
+@media (min-width: 1281px) {
+	body.pc{
+		background: url('../../../index.php/responsive/size/1440/signin-bg.jpg') no-repeat top center;
+	}
+}
+
+@media (min-width: 1440px) {
+	.responsive(1440);
+	body.pc {
+		.container {
+			header {
+				h1 {
+					padding-top: 300 / 2880 * 1440 + 0px;
+					padding-left: 0 / 2880 * 1280 + 0px;
+					span {
+						padding-bottom: 36 / 2880 * 1440 + 0px;
+					}	
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1441px) {
+	body.pc{
+		background: url('../../../index.php/responsive/size/1920/signin-bg.jpg') no-repeat top center;
+	}
+}
+
+@media (min-width: 1920px) {
+	.responsive(1920);
+}
+
+@media (min-width: 1921px) {
+	body.pc {
+		background: url('../../../index.php/responsive/size/normal/signin-bg.jpg') no-repeat top center;
+	}
+}

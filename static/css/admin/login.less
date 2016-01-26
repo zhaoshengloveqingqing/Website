@@ -1,0 +1,109 @@
+@import '../base';
+@import '../buttons';
+
+@pinet-screen-width: 2880;
+
+body {
+	background: #f8f8f8;
+}
+
+.form-horizontal {
+	label.control-label {
+		text-align: left;
+	}
+	input.form-control {
+		height: 80px / @pinet-screen-width * 1440;
+	}	
+}
+
+.admin_login_responsive(@width) {
+	.pinet-btn-metro-green {
+		.metro-button-size-res(432, 115, @width);
+	}
+
+	.pinet-btn-metro-grey {
+		.metro-button-size-res(432, 115, @width);
+	}
+
+	.container {
+		width: 100%;
+		padding: 0;
+		padding-bottom: 130px / 2880 * @width;
+		border-bottom: 2px solid #d6d6d6;
+		#login-componet	{
+			background: #ffffff;
+			width: 2304px / @pinet-screen-width * @width;
+			height: 1080px / @pinet-screen-width * @width;
+			margin: 0 auto;
+			margin-top: 165px / @pinet-screen-width * @width;
+			border: 1px solid #ccc;
+			.login-componet-header {
+				height: 167px / @pinet-screen-width * @width;
+				border-bottom: 1px solid #e0e0e0;
+				margin: 0 (56px / @pinet-screen-width * @width);
+				padding-top: 32px / 2880 * @width;
+				picture {
+					width: 345px / 2880 * @width;
+				}
+			}
+			.login-componet-content {
+				margin: 0 auto;
+				.login-componet-formcon {
+					margin-top: 128px / @pinet-screen-width * @width;
+					width: 1460px / @pinet-screen-width * @width;
+					margin-left: 366px / @pinet-screen-width * @width;
+					input.form-control {
+						height: 120px / @pinet-screen-width * @width;
+					} 
+					.pinet-form-input {
+						padding: 0;
+						input {
+							width: 1026px / 2880 * @width;
+							border: 1px solid #eceef0;
+						}
+					}
+					label {
+						width: 426px / 2880 * @width;
+						padding: 0;
+						padding-top: 50px / @pinet-screen-width * @width;
+						font-size: 35px / @pinet-screen-width * @width;
+					}
+					.form-title {
+						font-size: 50px / @pinet-screen-width * @width;
+						padding-bottom: 90px / @pinet-screen-width * @width;
+						margin-bottom: 0;
+					}
+					.form-tr {
+						margin-top: 100px / @pinet-screen-width * @width;
+					}
+					.form-bt {
+						margin-top: 135px / @pinet-screen-width * @width ;
+						.ok {
+							margin-left: 275px / @pinet-screen-width * @width;	
+							font-size: 45px / @pinet-screen-width * @width;
+							
+
+						}
+						.cancel {
+							font-size: 45px / @pinet-screen-width * @width;
+							margin-left: 55px / @pinet-screen-width * @width;
+							
+						} 
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.admin_login_responsive(1280px);
+}
+
+@media screen and (min-width: 1440px) {
+	.admin_login_responsive(1440px);
+}
+
+@media screen and (min-width: 1920px) {
+	.admin_login_responsive(1920px);
+}

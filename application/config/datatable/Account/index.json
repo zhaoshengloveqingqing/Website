@@ -1,0 +1,16 @@
+{
+    "columns": [
+        { "data": "id", "title" : "", "action":"account/summary_edit", "toggle": true, "searchable": false},
+        { "data": "username", "title":"User Name" },
+        { "data": "contact_company", "title":"Company"},
+        { "data": "timestamp", "title":"Last Login", "searchable": false},
+        { "data": "mobile", "title":"Phone Number", "searchable": false},
+        { "data": "email_address", "title":"Email"}
+    ],
+    "customized_query": {
+        "query": "select u.id,u.username,a.contact_company,a.mobile,u.email_address,u.timestamp from $$partner_users as pu inner join $$accounts as a on pu.partner_user_id=a.user_id inner join $$users as u on a.user_id=u.id",
+        "dbtotal_count_query": "select count(u.id) as count from $$partner_users as pu inner join $$accounts as a on pu.partner_user_id=a.user_id inner join $$users as u on a.user_id=u.id",
+        "total_count_query": "select count(u.id) as count from $$partner_users as pu inner join $$accounts as a on pu.partner_user_id=a.user_id inner join $$users as u on a.user_id=u.id"
+    },
+    "selectType": "single"
+}

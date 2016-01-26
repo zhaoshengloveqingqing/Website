@@ -1,0 +1,25 @@
+@import 'btn-group_def';
+@import 'btn-group_fun';
+
+.btn-group_res(@screen-width) {
+	.btn-group-blue {
+		&.open {
+			.dropdown-toggle {
+				.box-shadow(none);
+			}
+		}
+		.dropdown-toggle {
+			.button-variant();
+			.pinet-btn-blue;	
+			.res(font-size, 30px);
+			.caret {
+				.res(border-width, 12px);
+				.res(margin-left, 50px);
+			}
+		}
+		.dropdown-menu {
+			.dropdown-menu-blue;
+		}
+		.btn-group-variant(@btn-group-width-default);		
+	}
+}

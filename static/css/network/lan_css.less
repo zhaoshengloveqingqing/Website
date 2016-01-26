@@ -1,0 +1,62 @@
+@import 'network_def';
+@import 'network_fun';
+
+.init_network_lan_res(@screen-width) {
+	.admin_res(@screen-width);
+	.network_lan_res(@screen-width);
+}
+
+.network_lan_res(@screen-width) {	
+	.container {
+
+		.network_clear_scrollcontent_margin_right-fun();
+
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		#main {
+			.content {
+				.workbench {
+					.network_toolbar_res(@screen-width);	
+					.btn {
+						&.save {
+							.button-size(205px, 80px);
+							.res(margin-right, 20px);
+							.res(margin-left, 20px);
+						}
+					}					
+				}		
+			}
+		}
+
+		.scrollcontent {
+			.panel-body {	
+				.res(padding-top, 25px);
+				.res(padding-bottom, 60px);
+				.res(padding-left, 37px);			
+				.form-group.control-group {
+					padding: 0;
+					.res(margin-top, 35px);	
+					.control-label {
+						.res(font-size,25px);
+					}
+				}
+			}
+		}	
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.init_network_lan_res(1280px);			
+}
+
+@media screen and (min-width: 1440px) {
+	.init_network_lan_res(1440px);	
+}
+
+@media screen and (min-width: 1920px) {
+	.init_network_lan_res(1920px);					
+}

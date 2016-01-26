@@ -1,0 +1,46 @@
+@import 'select_def';
+@import 'select_fun';
+
+.select_res(@screen-width) {
+	.selectboxit-container {
+		span {
+			height: 75px / 2880 * @screen-width;
+			line-height: 75px / 2880 * @screen-width;		
+		}
+		.selectboxit-options {
+			border-radius: 0;
+			a {
+				height: 75px / 2880 * @screen-width;
+				line-height: 75px / 2880 * @screen-width;
+			}
+		} 
+		.selectboxit-btn {
+			background-color: #ffffff;
+			background-image: none;	
+			margin-top: 2px;
+			margin-bottom: 2px;
+			color: #6f767e;
+			&.selectboxit-enabled:hover,
+			&.selectboxit-enabled:focus,
+			&.selectboxit-enabled:active {
+			  color: #6f767e;
+			  background-color: #ffffff;
+			}
+			&.selectboxit-open {
+				margin-bottom: 2px;
+			}
+		}
+		.selectboxit-list {
+			.selectboxit-option-anchor {
+				color: #6f767e;
+			}
+			& > .selectboxit-focus {
+				& > .selectboxit-option-anchor {
+					background-color: #41b6eb;
+					background-image: none;
+					color: #ffffff;
+				}				
+			}
+		}
+	}
+}

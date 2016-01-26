@@ -1,0 +1,106 @@
+[
+    {
+        "field": "logo",
+        "label": "Logo"
+    },
+    {
+        "field": "company",
+        "label": "Company"
+    },
+    {
+        "field": "contents",
+        "label": "Contents"
+    },
+    {
+        "field": "login",
+        "label": "Login"
+    },
+    {
+        "field": "photo",
+        "label": "Photo"
+    },
+    {
+        "field": "introduction",
+        "label": "Introduction Contents"
+    },  
+    {
+        "field": "photo1",
+        "label": "1st Photo"
+    },
+    {
+        "field": "title1",
+        "label": "1st Title"
+    },
+    {
+        "field": "contents1",
+        "label": "1st Contents"
+    },
+    {
+        "field": "photo2",
+        "label": "2st Photo"
+    },
+    {
+        "field": "title2",
+        "label": "2st Title"
+    },
+    {
+        "field": "contents2",
+        "label": "2st Contents"
+    },
+    {
+        "field": "photo3",
+        "label": "3st Photo"
+    },
+    {
+        "field": "title3",
+        "label": "3st Title"
+    },
+    {
+        "field": "contents3",
+        "label": "3st Contents"
+    } ,
+    {
+        "field": "photo4",
+        "label": "4st Photo"
+    },
+    {
+        "field": "title4",
+        "label": "4st Title"
+    },
+    {
+        "field": "contents4",
+        "label": "4st Contents"
+    },
+    {
+        "field": "photo5",
+        "label": "5st Photo"
+    },
+    {
+        "field": "title5",
+        "label": "5st Title"
+    },
+    {
+        "field": "contents5",
+        "label": "5st Contents"
+    },
+    {
+        "field": "login_wechat",
+        "label": ""
+    },
+    {
+        "field": "login_weibo",
+        "label": ""
+    },
+    {
+        "field": "login_qq",
+        "label": ""
+    },
+    {
+        "field": "login_yixin",
+        "label": ""
+    },
+    {
+        "field": "operate_type",
+        "label": ""
+    }
+]

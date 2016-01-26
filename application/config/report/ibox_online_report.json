@@ -1,0 +1,35 @@
+{
+	"sql": "select count(sys_load)*100*?/? as value, name as legend from $$heart_beats as h join $$gateways as g on h.gateway_id = g.id where g.owner_id = ? and timestamp >= ? and timestamp < ? group by h.gateway_id order by h.gateway_id",
+    "chart": {
+        "type": "area"
+    },
+    "credits": {
+        "enabled": false
+    },
+    "plotOptions": {
+        "area": {
+            "marker": {
+                "enabled": false,
+                "radius": 2,
+                "states": {
+                    "hover": {
+                        "enabled": true
+                    }
+                },
+                "symbol": "circle"
+            }
+        }
+    },
+    "title": {
+        "text": "iBox Online Report"
+    },
+    "tooltip": {},
+    "xAxis": {
+        "allowDecimals": false
+    },
+    "yAxis": {
+        "title": {
+            "text": "Online Percentage"
+        }
+    }
+}

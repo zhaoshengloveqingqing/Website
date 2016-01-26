@@ -1,0 +1,30 @@
+[
+	{
+		"field": "id",
+		"label": "ID"
+	},
+	{
+		"field": "username",
+		"label": "Username",
+		"rules": {
+			"maxlength": [20,"用户名在20位以下"],
+			"pattern": "[a-z_]+",
+			"minlength": [3,"用户名必须为3位以上"]
+		}
+	},
+	{
+		"field": "email_address",
+		"label": "Email",
+		"rules": ["email", "required"]
+	},
+	{
+		"field": "password",
+		"label": "Password",
+		"rules": ["password", "required"]
+	},
+	{
+		"field": "group",
+		"label": "Group",
+		"rules": "select"
+	}
+]

@@ -1,0 +1,70 @@
+@import 'ibox_def';
+@import 'ibox_fun';
+
+.init_ibox_user_res(@screen-width) {
+	.admin_res(@screen-width);
+	.ibox_user_res(@screen-width);
+}
+
+.ibox_user_res(@screen-width) {
+	.container {
+		& > .response-row { 
+			.panel-body {
+				padding: 0;
+			}
+		}
+		.tooltip {
+			background-color: #fff;
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		.ibox_toolbar_res(@screen-width);
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	@screen-width: 1279px;  
+	.init_ibox_user_res(1279px);
+	body.iframe {
+		.ibox_user_res(1279px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}
+
+@media screen and (min-width:1280px) and (max-width: 1439px) {
+	@screen-width: 1439px;  
+	.init_ibox_user_res(1439px);
+	body.iframe {
+		.ibox_user_res(1439px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}
+
+@media screen and (min-width:1440px) and (max-width: 1599px) {
+	@screen-width: 1440px;  
+	.init_ibox_user_res(1440px);
+	body.iframe {
+		.ibox_user_res(1440px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}
+
+@media screen and (min-width:1600px) and (max-width: 1759px) {
+	@screen-width: 1600px;  
+	.init_ibox_user_res(1600px);
+	body.iframe {
+		.ibox_user_res(1600px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}
+
+@media screen and (min-width:1760px) and (max-width: 1920px) {
+	@screen-width: 1760px;  
+	.init_ibox_user_res(1760px);
+	body.iframe {
+		.ibox_user_res(1760px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}

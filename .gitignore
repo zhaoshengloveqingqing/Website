@@ -1,0 +1,14 @@
+user_guide/
+*.swo
+*.swp
+sparks
+.project
+.settings
+tags
+application/logs
+application/cache
+.DS_Store
+.idea
+*~
+launcher3227298707718714666
+static/uploads/

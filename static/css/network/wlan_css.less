@@ -1,0 +1,142 @@
+@import 'network_def';
+@import 'network_fun';
+
+.init_network_wlan_res(@screen-width) {
+	.admin_res(@screen-width);
+	.network_wlan_res(@screen-width);
+}
+
+.network_wlan_res(@screen-width) {	
+	.container {
+
+		.network_clear_scrollcontent_margin_right-fun();
+
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		
+		#main {
+			.content {
+				.workbench {
+					.network_toolbar_res(@screen-width);	
+					.btn {
+						&.save {
+							.button-size(205px, 80px);
+							.res(margin-right, 20px);
+							.res(margin-left, 20px);
+						}
+					}					
+				}		
+			}
+		}
+
+
+
+		.scrollcontent {
+			.panel-body {
+				.res(padding-top, 25px);
+				.res(padding-bottom, 60px);
+				.res(padding-left, 50px);
+				.form-group.control-group {
+   					width:60%;
+      					padding: 0;
+      					float: left;
+   					.res(margin-top, 35px);	
+   					.control-label {
+   						text-align: left;
+   						.res(padding-left, 0px);
+   						.res(font-size,25px);
+					}
+	   			
+	   			}	
+	   			
+				.form-group.control-group.channel {
+					.selectboxit-container {	
+						width:100%;					
+						span {
+							height: 75px / 2880 * @screen-width;
+							line-height: 75px / 2880 * @screen-width;		
+						}
+						.selectboxit-options {
+							border-radius: 0;
+							a {
+								height: 75px / 2880 * @screen-width;
+								line-height: 75px / 2880 * @screen-width;
+							}
+						} 
+						.selectboxit-btn {
+							width:100%;
+							background-color: #ffffff;
+							background-image: none;	
+							border-color: #ccc;
+							margin-left: 0px;
+							margin-bottom: 0px;
+							background-color: #ffffff;
+							background-image: none;	
+							margin-top: 2px;
+							margin-bottom: 2px;
+							color: #6f767e;
+							&.selectboxit-enabled:hover,
+							&.selectboxit-enabled:focus,
+							&.selectboxit-enabled:active {
+							  color: #6f767e;
+							  background-color: #ffffff;
+							}
+							&.selectboxit-open {
+								margin-bottom: 2px;
+							}
+						}
+						.selectboxit-list {
+							.selectboxit-option-anchor {
+								color: #6f767e;
+							}
+							& > .selectboxit-focus {
+								& > .selectboxit-option-anchor {
+									background-color: #41b6eb;
+									background-image: none;
+									color: #ffffff;
+								}				
+							}
+						}
+					}	
+				}
+      				
+				.btn {
+	   				.res(margin-top, 38px);	
+	   				float: left;
+	   				.res(margin-left, 20px);
+	   				.res(width,70px);
+	   				.res(height,70px);
+	   				.res(line-height,70px);
+					.res(margin-bottom, 0px);	
+	   				.res(margin-right, 0px);
+	   				padding: 0px;
+	   				background-color: #f2f3f5;
+	   				color:#c6cacc;	   				
+   				}
+			
+			}
+
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.init_network_wlan_res(1280px);			
+}
+
+@media screen and (min-width: 1440px) {
+	.init_network_wlan_res(1440px);	
+}
+
+@media screen and (min-width: 1920px) {
+	.init_network_wlan_res(1920px);					
+}
+
+
+
+
+

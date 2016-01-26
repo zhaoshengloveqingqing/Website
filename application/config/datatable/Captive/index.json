@@ -1,0 +1,16 @@
+{
+    "columns": [
+        { "data": "username", "title" : "User Name", "refer" : "id", "searchable": false},
+        { "data": "protocol", "title" : "Protocol", "refer" : "id", "searchable": false},
+        { "data": "action", "title" : "Action", "refer" : "id", "searchable": false},
+        { "data": "ip_host", "title" : "IP Address/Hostname", "refer" : "id"},
+        { "data": "port", "title" : "Port", "refer" : "id", "searchable": false},
+        { "data": "description", "title" : "Description", "refer" : "id"}
+    ],
+    "customized_query": {
+        "query": "select f.id,u.username,f.protocol,f.action,f.ip_host,f.port,f.description from $$firewalls as f inner join $$users as u on f.user_id=u.id where u.user_type <>'-1'",
+        "dbtotal_count_query": "select count(f.id) as count from $$firewalls as f inner join $$users as u on f.user_id=u.id where u.user_type <>'-1'",
+        "total_count_query": "select count(f.id) as count from $$firewalls as f inner join $$users as u on f.user_id=u.id where u.user_type <>'-1'"
+    },
+    "selectType": "multi"
+}

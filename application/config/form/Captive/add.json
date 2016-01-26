@@ -1,0 +1,26 @@
+[
+    {
+        "field": "firewall_rules_ip_address",
+        "label": "IP-Address/Hostname"
+    },
+    {
+        "field": "firewall_rules_protocol",
+        "label": "Protocol"
+    },
+    {
+        "field": "firewall_rules_port",
+        "label": "Port"
+    },
+    {
+        "field": "firewall_rules_action",
+        "label": "Action"
+    },
+    {
+        "field": "firewall_rules_comments",
+        "label": "Comments"
+    },
+    {
+        "field": "save_type",
+        "label": ""
+    }
+]

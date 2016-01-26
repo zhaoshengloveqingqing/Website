@@ -1,0 +1,50 @@
+[
+	{
+		"field": "serial",
+		"label": "Serial"
+	},
+	{
+		"field": "name",
+		"label": "iBox Name"
+	},
+	{
+		"field": "owner_name",
+		"label": "iBox Owner"
+	},
+	{
+		"field": "mac",
+		"label": "MAC Address"
+	},
+	{
+		"field": "hostname",
+		"label": "iBox Hostname"
+	},
+	{
+		"field": "ip",
+		"label": "IP Address"
+	},
+	{
+		"field": "status",
+		"label": "Online Status"
+	},
+	{
+		"field": "notes",
+		"label": "iBox Note"
+	},
+	{
+		"field": "address",
+		"label": "Address Info"
+	},
+	{
+		"field": "search_name",
+		"label": "GEO Info"
+	},
+    {
+        "field": "longitude",
+        "label": ""
+    },
+    {
+        "field": "latitude",
+        "label": ""
+    }
+]

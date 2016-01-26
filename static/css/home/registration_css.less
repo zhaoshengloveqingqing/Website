@@ -1,0 +1,442 @@
+@import 'home_def';
+@import 'home_fun';
+
+.init_home_registration_res(@screen-width) {
+	.init_com(@screen-width);
+	.home_registration_res(@screen-width);
+}
+
+.ul_position_center() {
+	ul {
+		position: relative;
+		right: 50%;
+		float: right;
+		> li {
+			position: relative;
+			left: 50%;
+			float: left;
+		}
+	}
+}
+
+.home_registration_res(@screen-width) {
+	.container {
+		width: 100%;
+		height: 100%;
+		padding: 0;	
+		picture {
+			display: inline-block;
+		}
+		background-color: #f9f9f9;
+		#login-modal {
+			.modal(@screen-width);
+		}
+		
+		form {
+			
+			ul > li{
+				.res(margin-top,30px);
+				input.form-control {
+					.res(610px,70px);
+				}
+			}
+
+			.btn-send-request {
+				input{
+				.res( 415px,90px);
+				}
+			}
+		}
+		#nav-menu {
+			picture {
+			 	.res(width, 140px);
+			 	.res(height, 140px);
+			 	img {
+			 		width: 100%;
+			 		height: 100%;
+			 	}
+			}
+			li {
+				margin: 0;
+				.res(width, 383px);
+				.res(padding-top, 116px);
+				.res(padding-bottom, 110px);
+				background-color: #ffffff;
+				.info {
+					color: #4f6767;
+					.res(margin-top, 100px);
+					.res(font-size, 39px);
+				}
+			}
+		}
+		#nav-btn-group {
+			.res(width, 1600px);
+			li {
+				width: 100%;
+				margin: 0;
+				.res(height, 128px);
+				background-color: #e7ebea;
+				.border-radius(20px);
+				.res(margin-bottom, 50px);
+				color: #4f6767;
+				.res(font-size, 36px);
+				.res(line-height, 128px);
+			}
+		}
+		#nav-team {
+			li {
+				.res(width, 218px);
+			}
+		}
+
+		.home-header_fun(@screen-width);
+
+		#header {
+			.res(height, 180px);
+			background-image: none;
+			background-color: @pinet-blue;
+		}
+
+		.center-row {
+			width: 100%;
+			.ul_position_center();
+			ul.nav {
+				clear: both;
+				text-align: center;
+			}
+			ul.nav-head {
+				clear: both;
+				p {
+					text-align: center;
+				}
+			}
+			ul.nav-body {
+				clear: both;
+				> li {
+				  	p {
+				  		text-align: center;
+				  	}
+				  	picture {
+				  		display: inline-block;
+				  	}
+				}
+			}
+		}
+
+		.res_row {
+			width: 100%;
+			.ul_position_center();
+			ul.nav {
+				clear: both;
+				text-align: center;
+			}
+			ul.nav-head {
+				clear: both;
+				p {
+					text-align: center;
+				}
+			}
+			ul.nav-body {
+				clear: both;
+				> li {
+				  	p {
+				  		text-align: center;
+				  	}
+				  	picture {
+				  		display: inline-block;
+				  	}
+				}
+			}
+		}
+
+		#send_mail {
+			.nav-head {
+				>li {
+					.res(width, 1900px);
+					.messagesbar {
+						.res(margin-top, 60px);
+						text-align: left;
+
+					}	
+				}
+			}
+			.nav-body {
+				> li {
+					.res(width, 1900px);
+				}
+				.panel {
+					.res(margin-top, 40px);
+					.res(margin-bottom, 80px);
+					.btn {
+
+						.res-size( 400px,90px);
+						.res(margin-top, 0px);
+						.res(margin-bottom, 40px);
+					}
+					text-align: center;
+					.panel-heading {
+						.res(padding-top, 40px);
+						.res(padding-bottom, 40px);
+						text-align: left;
+						.res(font-size, 30px);
+					}
+					.panel-body {
+
+						
+						padding: 2% 4%;
+						.res(font-size, 25px);
+						.registration-form {
+								
+							width: 50%;
+							float: left;
+                                                                                                     padding-right: 6%;
+                                                                                          	 border-right: 1px solid #e1e4e6;
+							color: #5a5a5a;
+							.info {
+								text-align: left;
+								.res(padding-bottom, 68px);
+								.res(font-size, 33px);
+								
+							}
+							.control-group.form-group {
+								margin-left:0px;
+								margin-right: 0px;
+								> label {
+									.res(font-size, 30px);
+									float: left;
+
+								}
+								p.help-block {
+									color:#aaadb0;
+									width:100%;
+									float: left;
+									text-align: left;
+									.res(font-size, 24px);
+								}
+								> input{
+									display: block;
+									width: 100%;
+									.res(height, 80px);
+									.border-radius(4px);
+									.res(line-height, 80px);
+								}
+								>textarea {
+									.res(height, 240px);		
+								}
+							}
+						}
+						.registration-map {
+     							
+							width: 44%;
+							float: right;
+						
+							
+							.info {
+								text-align: center;
+								.res(font-size, 33px);
+								color: #5a5a5a;
+								.res(padding-bottom,81px);
+							}
+							.row {
+								// .res(height, 80px);
+										
+								// 		.res(line-height, 80px);
+								margin-left:0px;
+								margin-right: 0px;
+								.control-group.form-group {							
+									> label {
+										.res(font-size, 30px);
+										float: left;
+
+									}
+									
+									> input{
+										display: block;
+										width: 100%;
+										.res(height, 80px);
+										.border-radius(4px);
+										.res(line-height, 80px);
+									}
+									
+								}
+								> .search {
+						   				.res(width,80px);
+						   				.res(height, 80px);
+										.res(line-height, 80px);
+										.res(margin-left, 10px);
+										float: right;
+						   				padding: 0px;
+						   				background-color: #f2f3f5;
+						   				color:#c6cacc;	
+						   				border: none;   				
+					   				}
+							}
+							.map {
+								.res(height, 890px);
+								width: 100%;
+								background-color: #000;
+							}
+						}
+
+						
+						// .control-group.form-group.email {
+						// 	.res(margin-top, 60px);
+						// 	.control-label {
+						// 		.res(line-height, 80px);
+						// 		.res(padding-top, 0px);
+						// 	}
+						// 	.pinet-form-input {
+						// 		.form-control {
+									
+						// 			.res(height, 80px);
+						// 		}
+						// 	}
+						// }
+						// .btn {
+						// 	.res-size( 400px,90px);
+						// 	.res(margin-top, 20px);
+						// }
+
+					}
+
+				}
+			}
+		}
+		.res_row {
+			width: 100%;
+			.ul_position_center();
+			ul.nav {
+				clear: both;
+				text-align: center;
+			}
+			ul.nav-title {
+				clear: both;
+				p {
+					color: #4f6767;
+					.res(width, 1280px);
+					text-align: center;
+					.res(font-size, 70px);
+					&.info {
+						color: #999999;
+						.res(font-size, 24px);
+					}
+				}
+			}
+			ul.nav-text {
+				clear: both;
+				p {
+					color: #4f6767;
+					.res(width, 1280px);
+					text-align: center;
+					.res(font-size, 70px);
+					&.info {
+						color: #999999;
+						.res(font-size, 24px);
+					}
+				}
+			}			
+			ul.nav-content {
+				clear: both;
+				> li {
+				  	.res(width, 540px);
+				  	.res(margin-left, 70px);
+				  	.res(margin-right, 70px);
+				  	p {
+				  		text-align: center;
+				  	}
+					.info {
+						color: #999999;
+						.res(font-size, 24px);
+					}				  	
+				  	picture {
+				  		display: inline-block;
+				  		.res(width, 224px);
+				  	}
+				}
+			}			
+		}
+
+		#contact_us {
+			clear: both;
+			position: relative;
+			margin: 0;
+			display: inline-block;
+			font-size: 0;
+			-webkit-text-size-adjust:none;
+			color: #4f6767;
+			background-color: #262626;
+			display: table;
+			.nav-text {
+				.res(margin-top, 190px);
+				.res(margin-bottom, 225px);
+				.res(font-size, 54px);
+			}
+			#nav-address {
+				.res(width, 1730px);
+				li {
+					.res(width, 430px);
+				}
+			}
+			#copyright {
+				.res(margin-bottom, 40px);
+				picture {
+					.res(width, 200px);
+					.res(height, 60px);
+				}
+				.res(margin-top, 285px);
+				.logo {
+					.res(margin-bottom, 40px);
+				}
+				.info, .email {
+					margin: 0 auto;
+					.res(width, 270px);
+					.res(font-size, 21px);
+				}
+				.email {
+					.res(margin-top, 45px);
+					.res(font-size, 14px);
+					a {
+						color: #4f6767;
+					}
+				}
+			}
+			#sns-link {
+				.res(margin-bottom, 210px);
+				li {
+					margin: 0;
+					.res(width, 60px);
+					.res(height, 60px);
+					.res(line-height, 60px);
+					background-color: #343434;
+					.res(margin-left, 18px);
+					.res(padding-left, 1px);
+					.res(margin-right, 18px);
+					.btn-circle;
+				}
+				picture {
+					width: 100%;
+					img {
+						.res(width, 31px);
+						.res(height, 31px);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1120px) {
+	.init_home_registration_res(1120px);	
+}
+
+@media screen and (min-width: 1280px) {
+	.init_home_registration_res(1280px);	
+}
+
+@media screen and (min-width: 1440px) {
+	.init_home_registration_res(1440px);		
+}
+
+@media screen and (min-width: 1920px) {
+	.init_home_registration_res(1920px);	
+}

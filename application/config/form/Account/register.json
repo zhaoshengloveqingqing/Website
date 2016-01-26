@@ -1,0 +1,89 @@
+[
+	{
+		"field": "name",
+		"label": "Name"
+		
+	},
+	{
+		"field": "email_address",
+		"label": "Email"
+		
+	}
+	,{
+		"field": "username",
+		"label": "Username"
+		
+	},
+	{
+		"field": "password",
+		"label": "Password"
+		
+	}
+	,
+	{
+		"field": "mobile",
+		"label": "Phone"
+		
+	},
+	{
+		"field": "password_confirm",
+		"label": "Confirm"
+		
+	}
+	,
+	{
+		"field": "birthday",
+		"label": "Date"
+		
+	},
+    {
+        "field": "sex",
+        "label": "Sex"
+
+    }
+	,
+	{
+		"field": "contact_profile",
+		"label": "Introduction"
+		
+	},
+    {
+        "field": "contact_company",
+        "label": "Company Name"
+
+    }
+	,
+	{
+		"field": "contact_street",
+		"label": "Street"
+		
+	},
+	{
+		"field": "contact_city",
+		"label": "City"
+		
+	}
+	,
+	{
+		"field": "contact_postalcode",
+		"label": "Post Code"
+		
+	},
+	{
+		"field": "contact_province",
+		"label": "Province"
+		
+	}
+	,
+	{
+		"field": "contact_country",
+		"label": "Country"
+
+	}
+	,
+	{
+		"field": "id",
+		"label": ""
+		
+	}
+]

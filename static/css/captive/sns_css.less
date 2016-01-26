@@ -1,0 +1,244 @@
+@import 'captive_def';
+@import 'captive_fun';
+
+.init_captive_sns_res(@screen-width) {
+	.admin_res(@screen-width);
+	.captive_sns_res(@screen-width);
+}
+
+.captive_sns_res(@screen-width) {	
+	.container {
+
+		.captive_displaybox-fun(@screen-width);
+
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		#main {
+			.content {
+				.workbench {
+					.captive_toolbar_res(@screen-width);						
+				}
+				.side {
+					margin-top: 0;
+				}		
+			}
+		}
+
+		.sns-switch-dialog_fun(@screen-width); 
+
+		& > .response-row {
+			#main {
+				.content {
+					.workbench {
+						.scrollcontent {
+							height: -moz-calc(~'100%'); 
+							height: -webkit-calc(~'100%'); 
+							height: calc(~'100%');
+						}
+					}
+				}				
+			}
+		}
+
+		.file-input_fun(@screen-width);
+
+		.scrollcontent {
+			.sns-display-box {
+				.res(height, 960px);
+				overflow: hidden;
+	
+				> .panel-body {
+					.sns-display-box-content {
+						width: 79.7%;
+					}
+					.sns-display-box-side {
+						width: 20.3%;
+					}
+				}
+
+				.sns-display-box-content {
+					h1 {
+						.res(font-size, 40px);
+						color: #55d684;
+						.res(padding-bottom, 20px);
+					}
+					p {
+						color: #a9adb3;
+						.res(font-size, 22px);
+						text-align:justify;
+						.res(line-height, 40px);
+					}
+					dl {
+						dt {
+							color: #c3c9cf;
+							.res(font-size, 28px);	
+						}
+						dd {
+							color: #a9adb3;
+							.res(font-size, 22px);
+							text-align:justify;
+							.res(padding-top, 20px);
+							.res(line-height, 40px);	
+						}
+					}
+					form {
+						padding-top: 15px;
+						padding-left: 3.4%;
+						padding-right: 10.4%;
+					}
+
+					padding-left: 2%;
+					padding-right: 10%;
+					.res(padding-top, 30px);
+					.res(padding-bottom, 50px);
+
+					.switch-dialog_fun(@screen-width);
+
+					.switch-dialog {
+						width: 25%;
+						margin-left: 12.4%;
+					}
+
+					.marketing-message-switch-dialog {
+						margin-left: 0;
+					}
+
+					.check-in-enable-switch-dialog {
+						.switch-dialog-content { 
+							background-color: #f9845b;
+						}
+					}
+
+					.check-in-poid-switch-dialog {
+						.switch-dialog-content { 
+							background-color: #e15258;
+						}						
+					}
+
+					.form-group {
+
+						.form-element.input {
+							display: block;
+							width: 100%;
+							.res(height, 80px);
+							border:1px solid #eceef0;
+							background-color: #eceef0;
+							.border-radius(4px);
+							.res(line-height, 80px);
+						}
+
+						.form-element.textarea {
+							border:1px solid #eceef0;
+							background-color: #eceef0;
+							.border-radius(4px);							
+							.res(height, 240px);
+						}
+
+						&:nth-child(1) {
+							> label {
+								padding-left: 0;
+							}							
+						}
+						&:nth-child(2) {
+							.res(padding-top, 40px);
+							> label {
+								padding-top: 0;
+							}
+							> textarea {
+								.res(height, 240px);
+								.res(margin-bottom, 20px);
+							}
+						}
+						&:nth-child(3) {
+							.res(padding-top, 40px);
+							.res(padding-bottom, 40px);
+							> label {
+								width: 17%;
+								float: left;
+							}
+							> input, .form-element.input, .file-input {
+								width: 65.5%;
+								float: left;
+								margin-left: 10px;
+							}
+							> .btn {
+								width: 14%;
+								.res(line-height, 80px);
+								margin-left: 10px;
+								tex-shadow: none;
+							} 
+						}
+					}
+
+					.form-group.form-group-field-link {
+						a {
+							.res(margin-left, 60px);
+							.res(line-height, 60px);
+							text-shadow: none;
+						}
+					}					
+				}
+
+				.sns-display-box-content.on {
+					iframe {
+						display: none;
+					}
+				}
+
+				.sns-display-box-side {
+					.sns-switch-dialog {
+						margin: 0;
+						width: 100%;
+						border: 0;
+						background-color: transparent; 
+						img {
+							.res(244px, 244px);
+							.res(margin-top, 67px);
+						}					
+						.caption {
+							background-color: transparent;
+							.footer {
+								display: block;
+								width: 100%;
+								.switch-box {
+									width: 60%;
+									margin: 0;
+									margin-left: 20%;
+									.btn {
+										width: 50%;
+									}
+								}
+							}
+						}
+					}
+					> .btn {
+						.res(font-size, 29px);
+						.res(height, 80px);
+						.res(line-height, 51px);
+						.res(margin-top, 240px);
+						width: 45.5%;
+						text-shadow: none;
+						margin-left: 27.2%;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.init_captive_sns_res(1280px);			
+}
+
+@media screen and (min-width: 1440px) {
+	.init_captive_sns_res(1440px);	
+}
+
+@media screen and (min-width: 1920px) {
+	.init_captive_sns_res(1920px);					
+}

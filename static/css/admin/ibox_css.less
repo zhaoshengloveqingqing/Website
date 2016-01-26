@@ -1,0 +1,50 @@
+@import 'admin_def';
+@import 'admin_fun';
+
+.init_admin_ibox_res(@screen-width) {
+	.admin_res(@screen-width);
+	.admin_ibox_res(@screen-width);
+}
+
+.admin_ibox_res(@screen-width) {	
+	.container {
+		& > .response-row { 
+			.panel-body {
+				padding: 0;
+			}
+		}
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		#main {
+			.content {
+				.workbench {
+					.admin_toolbar_res(@screen-width);
+				}		
+			}
+		}
+		// .captive_toolbar_res(@screen-width);
+		.scrollcontent {
+			.scrollcontent-inner {
+				.panel-body {
+                                                    
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.init_admin_ibox_res(1280px);			
+}
+
+@media screen and (min-width: 1440px) {
+	.init_admin_ibox_res(1440px);	
+}
+
+@media screen and (min-width: 1920px) {
+	.init_admin_ibox_res(1920px);					
+}

@@ -1,0 +1,58 @@
+[
+	{
+		"field": "box_name",
+		"label": "Box Name"
+		
+	},
+	{
+		"field": "hostname",
+		"label": "HostName"
+		
+	}
+	,{
+		"field": "manual",
+		"label": "Manual"
+		
+	},
+	{
+		"field": "address",
+		"label": ""
+		
+	}
+	,
+	{
+		"field": "city",
+		"label": ""
+		
+	},
+	{
+		"field": "china",
+		"label": ""
+		
+	}
+	,
+	{
+		"field": "state",
+		"label": ""
+		
+	}
+	,
+	{
+		"field": "zipcode",
+		"label": ""
+		
+	}
+	,
+	{
+		"field": "notes",
+		"label": "Notes"
+		
+	}
+	,
+	{
+		"field": "search",
+		"label": ""
+		
+	}
+
+]

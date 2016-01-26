@@ -1,0 +1,18 @@
+{
+	"columns": [
+		{ "data": "users.id", "title" : "", "action":"welcome/user", "toggle": true}, 
+		{ "data": "users.id", "title" : "ID", "action":"welcome/user"}, 
+		{ "data": "users.username", "title":"Username" }, 
+		{ "data": "users.email_address", "title":"Email" }, 
+		{ "data": "groups.group_name", "title":"Group", "refer":"groups.id"}, 
+		{ "data": "users.status", "title":"Status" }
+	],
+	"joins" : [
+		["groups_users", "groups_users.user_id = users.id"],
+		["groups", "groups_users.group_id = groups.id"]
+	],
+	"conditions": {
+		"groups.group_name !=": ""
+	},
+	"selectType": "multi"
+}

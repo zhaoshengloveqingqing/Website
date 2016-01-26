@@ -1,0 +1,53 @@
+.alert-variant(@screen-width) {
+	display: inline-block; 
+	width: 100%;
+	padding-top: 0;
+	padding-bottom: 0;
+	.res(height, 116px);
+ 	.res(margin-bottom, 40px);	
+ 	.info {
+		float: left;
+		height: 100%;
+		.res(line-height, 116px);
+ 	} 
+	.menu {
+		float:right; 
+		height:100%;
+		.res(padding-right, 38px);
+		.res(padding-top, 5px);
+		& > .btn {
+			.res(margin-top, 10px);
+			.res(width, 193px);
+			.res(height, 78px);
+			line-height: 0;
+			&:hover {
+				color: #ffffff;
+			}
+ 		}
+		& > .yes {
+			.res(margin-right, 22px);
+		}
+ 	} 		
+}
+
+.alert-color(@background, @border, @text-color, @btn-bg, @btn-bg-hover) {
+	background-color: @background;
+	border-color: @border;
+	color: @text-color;
+
+	hr {
+		border-top-color: darken(@border, 5%);
+	}
+	.alert-link {
+		color: darken(@text-color, 10%);
+	}
+
+	.menu {
+		& > .btn {
+			background-color: @btn-bg;
+			&:hover {
+				background-color: @btn-bg-hover;
+			}
+ 		}
+ 	} 	
+}

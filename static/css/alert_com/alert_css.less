@@ -1,0 +1,28 @@
+@import 'alert_def';
+@import 'alert_fun';		
+
+.alert_res(@screen-width) {
+	[class*=pinet-alert] {
+		.alert-variant(@screen-width);
+	}
+}
+
+.pinet-alert-success {
+ 	.alert-color(@pinet-alert-success-bg, @pinet-alert-success-border, 
+ 		@pinet-alert-success-text, @pinet-alert-success-btn-bg, @pinet-alert-success-btn-bg-hover);
+}
+
+.pinet-alert-info {
+ 	.alert-color(@pinet-alert-info-bg, @pinet-alert-info-border, @pinet-alert-info-text, 
+ 		@pinet-alert-info-btn-bg, @pinet-alert-info-btn-bg-hover);
+}
+
+.pinet-alert-warn {
+ 	.alert-color(@pinet-alert-warn-bg, @pinet-alert-warn-border, @pinet-alert-warn-text, 
+ 		@pinet-alert-warn-btn-bg, @pinet-alert-warn-btn-bg-hover);
+}
+
+.pinet-alert-error {
+ 	.alert-color(@pinet-alert-error-bg, @pinet-alert-error-border, @pinet-alert-error-text, 
+ 		@pinet-alert-error-btn-bg, @pinet-alert-error-btn-bg-hover);
+}

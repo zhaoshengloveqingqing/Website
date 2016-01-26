@@ -1,0 +1,18 @@
+[
+	{
+		"field": "wlan_ssid1",
+		"label": "SSID 1"
+	},
+	{
+		"field": "wlan_ssid2",
+		"label": "SSID 2"
+	},
+	{
+		"field": "wlan_channel",
+		"label": "Channel"
+	},
+    {
+        "field": "wlan_switch",
+        "label": ""
+    }
+]

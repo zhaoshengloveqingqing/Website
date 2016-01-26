@@ -1,0 +1,35 @@
+{
+	"sql": "select count(distinct slr.snsaccount_id) as value, name as legend from $$gateways as g inner join $$sns_login_records as slr on g.id=slr.gateway_id where g.owner_id = ? and timestamp >= ? and timestamp < ? group by g.id",
+    "chart": {
+        "type": "area"
+    },
+    "credits": {
+        "enabled": false
+    },
+    "plotOptions": {
+        "area": {
+            "marker": {
+                "enabled": false,
+                "radius": 2,
+                "states": {
+                    "hover": {
+                        "enabled": true
+                    }
+                },
+                "symbol": "circle"
+            }
+        }
+    },
+    "title": {
+        "text": "iBox Login Report"
+    },
+    "tooltip": {},
+    "xAxis": {
+        "allowDecimals": false
+    },
+    "yAxis": {
+        "title": {
+            "text": "iBox Login"
+        }
+    }
+}

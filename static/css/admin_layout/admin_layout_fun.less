@@ -1,0 +1,237 @@
+.init_com(@width) {
+	.btn_res(@width);
+	.datatable_res(@width);
+	.dropdown_res(@width);
+	.btn-group_res(@width);
+	.alert_res(@width);	
+	.panel_res(@width);	
+	.subnavi_res(@width);
+	.form_res(@width);
+	.panel_res(@width);
+}
+
+.height_res(@height; @width) {
+	height: @height / @screen-max-width * @width;
+	line-height:@height / @screen-max-width * @width;
+}
+
+.container_func(@screen-width) {
+	.init_com(@screen-width);
+	.tooltip {
+		.res(font-size, 21px);
+		.text-vertical-center(80px, 21px);
+		.tooltip-inner {
+			height: 100%;
+		}
+	}
+	.container {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		& > .response-row {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			@navw: 160 / @screen-max-width * @screen-width;
+			#nav {
+				width: 160px / @screen-max-width * @screen-width;
+				height: 100%;
+				background: #24292e;
+				padding: 0;
+				margin: 0;
+				.res(padding-top, 30px);
+				nav {
+					display: block;
+					@navigations-a-width: 100px / @screen-max-width * @screen-width;
+					@navigations-a-height: 100px / @screen-max-width * @screen-width; 
+					a {
+						position: relative;
+						width: 100%;
+						color: #505458;
+						display: block;
+						padding-left: 18.75%;
+						padding-right: 18.75%;
+						margin-bottom: 18.75%;
+						// width:  62.5%;
+						height:  @navigations-a-width;
+						// .res(height, @navigations-a-width);
+						text-align: center;
+						line-height:  @navigations-a-width;
+						picture {
+							display: block;
+							width: 100%;
+							padding-left: 24px / @screen-max-width * @screen-width;
+							padding-right: 24px / @screen-max-width * @screen-width;
+						}
+                    	&:hover {
+							text-decoration: none;
+							picture {
+								.border-radius(7px);
+								background-color: #1a1f22;
+							}
+			            }
+			            &.active {
+			            	text-decoration: none;
+							picture {
+								.border-radius(7px);
+								background-color: #1a1f22;
+							}
+			            }
+					}
+					a.divide {
+						height: 30px / @screen-max-width * @screen-width;
+						line-height: 30px / @screen-max-width * @screen-width;
+						position: absolute;
+						bottom: 270px / @screen-max-width * @screen-width;
+						&:hover {
+							background: none;
+						}
+					}
+					a.language{
+						position: absolute; 
+						bottom: 160px / @screen-max-width * @screen-width;
+					}
+					a.logoout{
+						position: absolute; 
+						bottom: 60px / @screen-max-width * @screen-width;
+					}
+				}
+				.tooltip {
+					width: 350px;
+					.tooltip-inner {
+						display: inline-block;
+						max-width: 350px;
+					} 
+				}
+			}
+			#main {
+				@sh: 125 / @screen-max-width * @screen-width;
+				width: calc(~'100% -'@navw);
+				height: 100%;
+				background: #f2f3f5;
+				overflow: hidden;
+				padding: 0;
+				.statebar {
+					height: 120px / @screen-max-width * @screen-width;
+					.res(margin-top, 30px);
+					> div {
+						// line-height: 160px / @screen-max-width * @screen-width;
+						font-size: 30px / @screen-max-width * @screen-width;
+						color: #676d75;
+					}
+					.title {
+						height: 100%;
+						margin-left: 54px / @screen-max-width * @screen-width;
+						padding: 0;
+						font-size: 36px / @screen-max-width * @screen-width;
+						color: #676e76;
+					}
+					.info {
+						height: 100%;
+						float: right;
+						margin-right: 93px / @screen-max-width * @screen-width;
+						font-size: 36px / @screen-max-width * @screen-width;
+						.logo {
+							float: right;
+							display: block;
+							width: 70px /  @screen-max-width * @screen-width;
+							height: 70px / @screen-max-width * @screen-width;
+							picture {
+								display: inline-block;
+								width: 70px /  @screen-max-width * @screen-width;
+								height: 70px / @screen-max-width * @screen-width;							
+							}
+						}
+						.tooltip {
+							display: inline-block;
+							.res(line-height, 42px);
+							.res(margin-left, 48px);
+						}
+						.content {
+							color: #2c3e50;
+							display: block;
+							height: 70px / @screen-max-width * @screen-width;
+							font-size: 26px / @screen-max-width * @screen-width;
+							.res(line-height, 70px);
+							padding-right: 48px / @screen-max-width * @screen-width;
+							margin-bottom: 0;
+							float: right;
+							&:hover {
+								text-decoration: none;
+							}
+						}		
+					}					
+				}
+				.content {
+					@bh: 167 / @screen-max-width * @screen-width;
+					height: -moz-calc(~'100% -'@bh); 
+					height: -webkit-calc(~'100% -'@bh); 
+					height: calc(~'100% -'@bh); 
+					overflow: auto;
+					.workbench {
+						width: 76.8%;
+						height: 100%;
+						overflow: hidden;
+						padding-left: 52px / @screen-max-width * @screen-width;
+						.toolbar {
+							margin-bottom: 34px / @screen-max-width * @screen-width;
+							// padding-right: @pinet-panel-margin-right * @screen-width;
+							.btn{
+								.button-size(200, 80, 44);
+								.res(line-height, 80px);
+								&#search {
+									margin-left: 20px / @screen-max-width * @screen-width;
+								}
+							}
+							.cancel {
+								margin-left: 20px / @screen-max-width * @screen-width;
+							}
+							input.search {
+								width: 518px / @screen-max-width * @screen-width;
+								height: 84px / @screen-max-width * @screen-width;
+								float: left;
+							}
+						}
+						.messagesbar {
+							// margin-right: @pinet-panel-margin-right * @screen-width;
+						}												
+						.scrollcontent {
+							// height: -moz-calc(~'100% -'@sh); 
+							// height: -webkit-calc(~'100% -'@sh); 
+							// height: calc(~'100% -'@sh);
+							height: 100%;
+							overflow-x: hidden;
+							overflow-y: auto;
+							border: 1px solid transparent;
+							background: transparent;
+							border-radius: 7px;
+							position: relative;
+							@ch: 287 / @screen-max-width * @screen-width; 
+							&.alerting {
+								height: -moz-calc(~'100% -'@ch); 
+								height: -webkit-calc(~'100% -'@ch); 
+								height: calc(~'100% -'@ch);			
+							}
+						}
+						.pinet-panel, .scrollcontent-inner { 
+							margin-right: @pinet-panel-margin-right * @screen-width;
+							.res(margin-bottom, 45px);
+						}
+					}
+					.side {
+						width: 23.2%;
+						padding-right: 93px / @screen-max-width * @screen-width;
+					}
+				}				
+			}
+		}
+	} 	   	
+}
+
+//safari hack
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.pinet-panel {
+		margin-right: 60px / @screen-max-width * 1280;
+	}
+}

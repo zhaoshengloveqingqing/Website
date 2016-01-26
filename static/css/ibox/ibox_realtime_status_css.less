@@ -1,0 +1,37 @@
+@import 'ibox_def';
+@import 'ibox_fun';
+
+.init_ibox_ibox_realtime_status_res(@screen-width) {
+	.admin_res(@screen-width);
+	.ibox_ibox_realtime_status_res(@screen-width);
+}
+
+
+.ibox_ibox_realtime_status_res(@screen-width) {	
+	.container {
+		& > .response-row { 
+			.panel-body {
+				padding: 0;
+			}
+		}
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		.ibox_toolbar_res(@screen-width);
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.init_ibox_ibox_realtime_status_res(1280px);			
+}
+
+@media screen and (min-width: 1440px) {
+	.init_ibox_ibox_realtime_status_res(1440px);	
+}
+
+@media screen and (min-width: 1920px) {
+	.init_ibox_ibox_realtime_status_res(1920px);					
+}

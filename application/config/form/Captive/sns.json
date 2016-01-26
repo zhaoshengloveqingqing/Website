@@ -1,0 +1,110 @@
+[
+    {
+        "field": "wechat_snsuid",
+        "label": "UID SNS"
+    },
+    {
+        "field": "wechat_message_content",
+        "label": "Message Content"
+    },
+    {
+        "field": "wechat_picture",
+        "label": "Upload Picture"
+    },
+    {
+        "field": "wechat_message",
+        "label": ""
+    },
+    {
+        "field": "wechat_checkin",
+        "label": ""
+    },
+    {
+        "field": "wechat_checkpoi",
+        "label": ""
+    },
+    {
+        "field": "weibo_snsuid",
+        "label": "UID SNS"
+    },
+    {
+        "field": "weibo_message_content",
+        "label": "Message Content"
+    },
+    {
+        "field": "weibo_picture",
+        "label": "Upload Picture"
+    },
+    {
+        "field": "weibo_message",
+        "label": ""
+    },
+    {
+        "field": "weibo_checkin",
+        "label": ""
+    },
+    {
+        "field": "weibo_checkpoi",
+        "label": ""
+    },
+    {
+        "field": "yixin_snsuid",
+        "label": "UID SNS"
+    },
+    {
+        "field": "yixin_message_content",
+        "label": "Message Content"
+    },
+    {
+        "field": "yixin_picture",
+        "label": "Upload Picture"
+    },
+    {
+        "field": "yixin_message",
+        "label": ""
+    },
+    {
+        "field": "yixin_checkin",
+        "label": ""
+    },
+    {
+        "field": "yixin_checkpoi",
+        "label": ""
+    },
+    {
+        "field": "qq_snsuid",
+        "label": "UID SNS"
+    },
+    {
+        "field": "qq_message_content",
+        "label": "Message Content"
+    },
+    {
+        "field": "qq_picture",
+        "label": "Upload Picture"
+    },
+    {
+        "field": "qq_message",
+        "label": ""
+    },
+    {
+        "field": "qq_checkin",
+        "label": ""
+    },
+    {
+        "field": "qq_checkpoi",
+        "label": ""
+    },
+    {
+        "field": "oauth_type",
+        "label": ""
+    },
+    {
+        "field": "status",
+        "label": ""
+    },
+    {
+        "field": "poi_id",
+        "label": ""
+    }
+]

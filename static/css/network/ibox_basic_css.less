@@ -1,0 +1,100 @@
+@import 'network_def';
+@import 'network_fun';
+
+.init_network_ibox_basic_res(@screen-width) {
+	.admin_res(@screen-width);
+	.network_ibox_basic_res(@screen-width);
+}
+
+.word-break {
+	word-wrap:break-word; 
+	overflow:hidden;
+}
+
+.network_ibox_basic_res(@screen-width) {	
+	.container {
+		& > .response-row { 
+			#main {
+				.content {
+					.side {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		
+		#main {
+			.content {
+				.workbench {
+					.network_toolbar_res(@screen-width);						
+				}		
+			}
+		}
+
+		.scrollcontent {
+			.panel-body {
+				.res(padding-left, 50px) ;
+				.res(padding-right, 50px) ;
+				.form-group.control-group {
+					border-bottom: 1px solid #f0f0f0;
+					.res(padding-top, 15px);	
+					.res(padding-bottom, 15px);
+					 .res(height, 115px);
+                                                                    .res(line-height, 115px);	
+					.control-label {
+						.res(font-size,25px);
+						.res(padding-left, 0px);
+					}
+					.pinet-form-input{
+						 .res(height, 85px);
+                                                                 		 .res(line-height, 85px);
+					}
+				}
+				.row{
+					.form-group.control-group  {
+						border-bottom: none;
+						.res(padding-left, 0px);
+						.control-label {
+							color:#6f767e;
+							text-align: left;
+							.res(margin-right, 8px);
+							.res(font-weight, 600);
+						}
+					}
+					.res(margin-left, 0px);
+					.res(margin-right, 0px);
+					border-bottom: 1px solid #f0f0f0;
+					.res(padding-left, 0px);
+
+				}
+				.place {
+					display: inline-block;
+					width: 100%;
+					.res(height, 340px);
+					.res(margin-bottom, 45px);
+					border:1px solid #f5f6f7;
+					background-color: #000;
+				}
+
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.init_network_ibox_basic_res(1280px);			
+}
+
+@media screen and (min-width: 1440px) {
+	.init_network_ibox_basic_res(1440px);	
+}
+
+@media screen and (min-width: 1920px) {
+	.init_network_ibox_basic_res(1920px);					
+}

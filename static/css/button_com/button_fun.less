@@ -1,0 +1,105 @@
+.btn-circle {
+	border-radius: 50%;
+}
+
+.button-variant(@color:#ffffff, @text-shadow: 0 2px rgba(0,0,0,.25)) {
+	color: @color;
+	.res(font-size, 26px);
+	.res(width, 170px);
+	.res(height, 80px);
+	.res(border-radius, 7px);
+	text-shadow: @text-shadow;
+	& > picture {
+		height: 100%;	
+	}
+	& > img, & > picture >img {
+		.res(height, 34px);
+		position: relative;	
+		top: -2px;
+		&.disabled {
+			
+		}
+	}
+	&.btn-circle {
+		.res(width, 80px);
+	}
+}
+
+.button-size(@width, @height, @line-height: @height) {
+	padding: 0;
+	.res(width, @width);
+	.res(height, @height);
+	.res(line-height, @line-height);
+}
+
+.mobile-button-size(@width, @height, @max-width, @line-height:@height) {
+	padding: 0;
+	.res(width, @width, @max-width);
+	.res(height, @height, @max-width);
+	.res(line-height, @line-height, @max-width);
+}
+
+
+.button-color(@color, @hover-color, @active-color, @box-shadow:none) {
+	.mixin-border-color(@color, @hover-color, @active-color);
+	.mixin-background-color(@color, @hover-color, @active-color);
+	.box-shadow(@box-shadow);
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		color:#ffffff;
+		background-color: @hover-color;
+		border-color: @hover-color;
+	}
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		background-image: none;
+		background-color: @active-color;
+		border-color: @active-color;	
+		.box-shadow(@box-shadow);	
+	}	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: #c2c7ca;
+			border-color: #c2c7ca;
+		}
+	}		
+}
+
+.switch-box-variant() {
+	border-width: 2px;
+	border-style: solid;
+	.res(font-size, 26px);
+	.border-radius(7px);
+	.btn {
+		color: #6f767e;
+		background-color: #ffffff;	
+		&:active, &.active {
+			.box-shadow(none);			
+		}	
+	}
+}
+
+.switch-box-color(@color, @hover-color, @border-color:@color, @text-color:#ffffff) {
+	border-color:@border-color;
+	.btn {
+		&:not(.active) {
+			&:hover {
+				background-color: @hover-color;			
+			}
+		}
+		&.active {
+			color: @text-color;
+			background-color: @color;
+		}
+	}
+}

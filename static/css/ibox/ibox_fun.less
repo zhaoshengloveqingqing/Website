@@ -1,0 +1,75 @@
+.ibox_toolbar_res(@screen-width) {
+	.toolbar {
+		position: relative;
+		picture {
+			.res(width, 48px);
+		}			
+		input[type=text] {
+			float: left;
+			.res-size(580px, 85px);
+			.res(margin-right, 20px);
+		}
+		.btn {
+			text-shadow: none;
+			.res(font-size, 26px);
+			&.search {
+				.button-size(205px, 80px);
+				.res(margin-right, 20px);
+			}
+			&.selectbox {
+				.button-size(305px, 80px);
+			}
+		}
+		.faq {
+			float: right;
+			position: absolute; 
+			top: 0;
+			right: 0;
+			.res-size(85px, 85px);
+			border:1px solid #8d9aa5;
+			background-color: #8d9aa5;
+			.border-radius(50%);
+			text-align: center;
+			.res(font-size, 48px);
+			.res(line-height, 85px);
+			color: #fff;
+		}
+	}
+}
+
+.ibox_iframe_res(@screen-width) {
+	body.iframe {
+		.container {
+			& > .response-row { 
+				#nav {
+					display: none;
+				}
+				#main {
+					width: 100%;
+			 		.statebar {
+						display: none;
+					}
+					.content {
+						.workbench {
+							width: 100%;
+							padding: 0;
+							.res(padding-top, 30px);
+							.toolbar {
+								margin-right: 0;
+							}
+							.scrollcontent {
+								margin-right: 0;
+								.pinet-panel {
+									margin-right: 0;
+								}
+							}
+						}					
+						.side {
+							display: none;
+						}
+					}
+				}		
+			}
+		}
+	}
+}

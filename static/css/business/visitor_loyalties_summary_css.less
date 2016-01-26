@@ -1,0 +1,93 @@
+@import 'business_def';
+@import 'business_fun';
+
+.init_business_visitor_loyalties_summary_res(@screen-width) {
+	.admin_res(@screen-width);
+	.business_visitor_loyalties_summary_res(@screen-width);	
+}
+
+.business_visitor_loyalties_summary_res(@screen-width) {	
+	.container {		
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}		
+		#main {
+			.content {
+				.workbench {
+					.business_toolbar_res(@screen-width);						
+				}		
+			}
+		}
+		.nav-stock {
+			display: inline-block;
+			& > li {
+				float: left;
+			}
+		}
+
+		.datepicker_fun();
+				
+		.pinet-panel {
+			position: relative;
+			.panel-heading {
+				background-color: #fafafa;
+				text-align: center;
+				.res(height, 110px);
+				.nav-stock {
+					margin: 0 auto;
+					.res(margin-top, 25px);
+					.prev {
+						float: left;
+						border-right-color: #c3c9cf;
+					}
+					.title {
+						color: #697179;
+						.res(margin-left, 105px);
+						.res(margin-right, 105px);
+					}
+					.next {
+						float: right;
+						border-left-color:  #c3c9cf;
+					}
+					.input-daterange.input-group {
+						position: relative;
+						margin-top: -5px;
+						background-color: transparent;
+						span.input-group-addon {
+							border: none;
+							background-color: transparent;
+						}
+					}					
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	@screen-width: 1279px;  
+	.init_business_visitor_loyalties_summary_res(1279px);
+}
+
+@media screen and (min-width:1280px) and (max-width: 1439px) {
+	@screen-width: 1439px;  
+	.init_business_visitor_loyalties_summary_res(1439px);
+}
+
+@media screen and (min-width:1440px) and (max-width: 1599px) {
+	@screen-width: 1440px;  
+	.init_business_visitor_loyalties_summary_res(1440px);
+}
+
+@media screen and (min-width:1600px) and (max-width: 1759px) {
+	@screen-width: 1600px;  
+	.init_business_visitor_loyalties_summary_res(1600px);
+}
+
+@media screen and (min-width:1760px) and (max-width: 1920px) {
+	@screen-width: 1760px;  
+	.init_business_visitor_loyalties_summary_res(1760px);
+}

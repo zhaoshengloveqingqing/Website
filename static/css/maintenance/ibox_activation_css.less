@@ -1,0 +1,188 @@
+@import 'maintenance_def';
+@import 'maintenance_fun';
+
+html, body {height: 100%;}
+
+.init_ibox_activation_res(@screen-width) {
+	.admin_res(@screen-width);
+	.ibox_activation_res(@screen-width);
+}
+
+.ibox_activation_res(@screen-width) {
+	& > .response-row {
+		#main {
+			.content {
+				.workbench {
+					.toolbar {
+						.btn {
+							&.stop,&.next {
+								.button-size(160px, 80px);
+								.res(margin-right, 24px);
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+
+	div.dataTables_paginate.listview_pagination {
+		.res(padding-top, 20px);
+		.res(padding-bottom, 20px);
+		.res(padding-right, 10px);
+		span {
+			a.paginate_button {
+				.res(border-radius, 10px);
+				.res(margin-left, 15px);
+				.res(margin-right, 15px);
+			}
+		}
+	}
+
+	.toolbar {
+		position: relative;
+		picture {
+			.res(width, 48px);
+		}			
+		input[type=text] {
+			float: left;
+			.res-size(580px, 85px);
+			.res(margin-right, 20px);
+			border-color: #67d790;
+		}
+		.btn {
+			text-shadow: none;
+			.res(font-size, 26px);
+			&.search {
+				.button-size(205px, 80px);
+				.res(margin-right, 20px);
+			}
+		}
+		.faq {
+			float: right;
+			position: absolute; 
+			top: 0;
+			right: 0;
+			.res-size(85px, 85px);
+			border:1px solid #8d9aa5;
+			background-color: #8d9aa5;
+			.border-radius(50%);
+			text-align: center;
+			.res(font-size, 48px);
+			.res(line-height, 85px);
+			color: #fff;
+		}
+	}
+
+	.maintance-listview_fun(@screen-width);
+
+	.listview_wrapper {
+		width: 100%;
+		.listview {
+			> li {
+				display: static;
+				width: 24%;
+				height: 100px;
+				margin-right: 1%;
+				background-color: #ffffff;
+				color: #000;
+				.res(border-radius, 7px); 
+				.res(height, 323px);
+				.res(margin-bottom, 30px);
+				.showbox.ibox-showbox {
+					border: 1px solid transparent;
+					overflow: hidden;
+					picture {
+						display: inline-block;
+						img {
+							width: 100%;
+						}
+					}
+					.showbox-body {
+						.res(height, 154px);
+						.res(padding-top, 24px);
+						.res(padding-left, 24px);
+						.res(padding-right, 24px);
+						.ibox-info {
+							.number{
+							        .res(font-size, 27px);
+							}
+							.name{
+							        .res(font-size, 22px);
+							}
+						}
+					}
+					.showbox-footer {
+						.res(padding-left, 24px);
+						.res(padding-top, 24px);
+						.res(padding-right, 24px);
+						.res(margin-bottom, 24px);
+						.res(height, 149px);
+						.btn {
+							.box-shadow(none);
+							
+							&.ibox-info-date {
+								.res(width, 150px);
+								.res(height, 100px);
+
+									text-align: center;
+								float: left;
+								padding: 0px;
+								margin: 0px;
+								p {
+									.res(padding-bottom, 4px);
+									.res(font-size, 20px);
+									.res(margin-bottom, 0px);
+									
+								}
+								
+								picture {
+									.res(width, 18px);	
+								}
+
+							}
+							&.ibox-stop-btn {
+								.res(margin-top, 28px);
+								padding: 0px;
+								float: right;
+								.res(width, 155px);
+								.res(height, 70px);
+								.ibox-stop{
+									.button-size(135px, 68px);
+									picture {
+										.res(width, 35px);
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#listview_order {
+			display: none;
+		}
+		#listview_orderbox {
+			display: none;
+		}
+		.dataTables_filter {
+			display: none;
+		}
+	}
+
+}
+
+@media screen and (min-width: 1280px) {
+	.init_ibox_activation_res(1280px);
+}
+
+@media screen and (min-width: 1440px) {
+	.init_ibox_activation_res(1440px);
+}
+
+@media screen and (min-width: 1920px) {
+	.init_ibox_activation_res(1920px);
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "field": "lan_ip_address",
+        "label": "IP Address"
+    },
+    {
+        "field": "lan_ip_mask",
+        "label": "Subnet Mask"
+    },
+    {
+        "field": "lan_ip_router",
+        "label": "Router"
+    },
+    {
+        "field": "lan_ip_dns",
+        "label": "DNS"
+    },
+    {
+        "field": "lan_type",
+        "label": ""
+    },
+    {
+        "field": "radio_switch",
+        "label": ""
+    }
+]

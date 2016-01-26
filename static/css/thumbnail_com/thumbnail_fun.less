@@ -1,0 +1,41 @@
+.dialog-variant() {
+	padding: 0;
+	.res(font-size, 29px);
+	img {
+		display: none;
+	}
+	.caption {
+		width: 100%;
+		position: relative;
+		display: inline-block;
+		height: 100%;
+		padding: 0;
+		h3 {
+			.res(padding-left, 52px);
+			color: #ffffff;
+		}
+		.footer {
+			width: 100%;
+			.res(height, 90px);
+			background-color: #ffffff;
+			position: relative;
+			.switch-box {
+				float: right;
+				.res(margin-top, 12px);
+				.res(margin-right, 20px);
+				border: none;
+				.btn {
+					.res(height, 64px);
+				}
+				.btn:not(.active) {
+					background-color: #eeeff4;
+					color: #a2a6ad;
+				}
+			}
+		}
+	}
+}
+
+.dialog-color(@color) {
+	background-color: @color;
+}

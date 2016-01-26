@@ -1,0 +1,14 @@
+[
+	{
+		"field": "username",
+		"label": "User Name"
+	},
+	{
+		"field": "password",
+		"label": "Password"
+	},
+    {
+        "field": "id",
+        "label": ""
+    }
+]

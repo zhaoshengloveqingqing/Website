@@ -1,0 +1,13 @@
+{
+    "columns": [
+        { "data": "month", "title" : "Month"},
+        { "data": "day", "title" : "Day"},
+        { "data": "hour", "title" : "Hour"},
+        { "data": "minute", "title" : "Minute"},
+        { "data": "week", "title" : "Week"},
+        { "data": "task", "title":"Task" },
+        { "data": "status", "title":"Status" }
+    ],
+    "selectType": "single",
+    "listtype": "static"
+}

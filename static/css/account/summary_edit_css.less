@@ -1,0 +1,211 @@
+@import 'account_def';
+@import 'account_fun';
+
+.init_account_summary_edit_res(@screen-width) {
+	.admin_res(@screen-width);
+	.select_res(@screen-width);	
+	.account_summary_edit_res(@screen-width);
+}
+
+.ibox_iframe_res(@screen-width) {
+	body.iframe {
+		.container {
+			& > .response-row { 
+				height: 100%;
+				#nav {
+					display: none;
+				}
+				#main {
+					width: 100%;
+					background-color: #ffffff;
+			 		.statebar {
+						display: none;
+					}
+					.content {
+						height: 100%;
+						.workbench {
+							width: 100%;
+							padding: 0;
+							.res(padding-top, 30px);
+							.toolbar {
+								margin-right: 0;
+							}
+							.scrollcontent {
+								margin-right: 0;
+								.scrollcontent-inner {
+									border: 0;
+									.box-shadow(none);
+									iframe {
+										display: block;
+									}
+								}
+								.pinet-panel {
+									margin-right: 0;
+								}
+							}
+						}					
+						.side {
+							display: none;
+						}
+					}
+				}		
+			}
+		}
+	}
+}
+
+.account_summary_edit_res(@screen-width) {	
+	.container {
+		.tooltip {
+			.tooltip-inner {
+				text-align: left;
+			}
+			.word-break;
+		}
+		#main {
+			.content {
+				.workbench {
+					.account_toolbar_res(@screen-width);					
+				}		
+			}
+		}
+		// .captive_toolbar_res(@screen-width);
+		.scrollcontent {
+			.scrollcontent-inner {
+				.panel-body {
+				                padding: 0px 55px 40px;
+				                position: relative;
+				                .absolute{
+				                   	position: absolute;
+				                  	top:0;
+				                   	right:55px;
+				                   	background-color: #f0f0f0;
+						display: inline-block;
+				                    	.res(width,343px);
+						.res(height,343px);
+						.res(line-height,343px);
+						text-align: center;
+				                         .img {
+							.res(width,255px);
+							.res(height,255px);
+                                                                        	}
+                                                                        	.form-group.control-group.upload{
+                                                                        		position: absolute;
+                                                                        		top:211px;
+                                                                        		right:0px;
+                                                                        		.res(height, 115px);
+                                                                        		
+                                                                        		>label {
+                                                                        			margin-right: 0px;
+                                                                        		}
+                                                                        	}
+                                                                        }
+					.form-group.control-group  {
+						.res(height, 115px);
+                                                             		border-bottom: 1px solid #f0f0f0;
+						.res(padding-top, 18px);
+						.control-label {
+							color:#6f767e;
+							.res(font-size, 25px);
+							.res(padding-left, 0px);
+							text-align: left;
+							.res(font-weight, 600);
+						}
+						.pinet-form-input{
+							color:#6f767e;
+							.res(font-size, 22px);
+							
+
+
+						}
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+					
+					
+					.row{
+						.form-group.control-group  {
+							border-bottom: none;
+							.res(padding-left, 0px);
+							.control-label {
+								color:#6f767e;
+								.res(font-size, 25px);
+								.res(padding-left, 0px);
+								.res(margin-right, 9px);
+								text-align: left;
+								.res(font-weight, 600);
+							}
+							&.contact_province {
+								.control-label {
+									.res(margin-right, 13px);
+								}
+							}
+						}
+						.res(margin-left, 0px);
+						.res(margin-right, 0px);
+						border-bottom: 1px solid #f0f0f0;
+						.res(padding-left, 0px);
+
+					}
+				
+					textarea {
+						text-align: left;
+						.res(height, 205px);
+						.res(padding-left, 0px);
+						.res(margin-top, 40px);
+						box-shadow: 0 0 10px #f1f1f1;
+						border-radius: 5px;
+						border-color: #ccc;	
+					}
+
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	@screen-width: 1279px;  
+	.init_account_summary_edit_res(1279px);
+	body.iframe {
+		.account_summary_edit_res(1279px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}
+
+@media screen and (min-width:1280px) and (max-width: 1439px) {
+	@screen-width: 1439px;  
+	.init_account_summary_edit_res(1439px);
+	body.iframe {
+		.account_summary_edit_res(1439px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}
+
+@media screen and (min-width:1440px) and (max-width: 1599px) {
+	@screen-width: 1440px;  
+	.init_account_summary_edit_res(1440px);
+	body.iframe {
+		.account_summary_edit_res(1440px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}
+
+@media screen and (min-width:1600px) and (max-width: 1759px) {
+	@screen-width: 1600px;  
+	.init_account_summary_edit_res(1600px);
+	body.iframe {
+		.account_summary_edit_res(1600px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}
+
+@media screen and (min-width:1760px) and (max-width: 1920px) {
+	@screen-width: 1760px;  
+	.init_account_summary_edit_res(1760px);
+	body.iframe {
+		.account_summary_edit_res(1760px);	
+	}
+	.ibox_iframe_res(@screen-width);
+}

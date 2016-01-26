@@ -1,0 +1,15 @@
+{
+    "columns": [
+        { "data": "nickname", "title":"Owner", "refer":"id"},
+        { "data": "incoming", "title":"Download", "searchable": false},
+        { "data": "outgoing", "title":"Upload", "searchable": false},
+        { "data": "total_in_out", "title":"Total", "searchable": false},
+        { "data": "mac", "title":"MAC", "searchable": false}
+    ],
+    "customized_query": {
+        "query": "select concat(s.id, '_', d.id) as id,s.nickname,n.incoming,n.outgoing,(n.incoming+n.outgoing) as total_in_out,d.mac from $$devices as d inner join $$sns_accounts as s on d.owner_id=s.user_id inner join (select sns_account_id, sum(incoming) as incoming, sum(outgoing) as outgoing from $$device_network_counters group by sns_account_id) as n on s.id = n.sns_account_id where s.id not in (select sns_account_id from $$blacklists as bl where bl.type='abandon' and bl.gateway_id=d.gateway_id)",
+        "dbtotal_count_query": "select count(d.owner_id) as count from $$devices as d inner join $$sns_accounts as s on d.owner_id=s.user_id where s.id not in (select sns_account_id from $$blacklists as bl where bl.type='abandon' and bl.gateway_id=d.gateway_id)",
+        "total_count_query": "select count(d.owner_id) as count from $$devices as d inner join $$sns_accounts as s on d.owner_id=s.user_id where s.id not in (select sns_account_id from $$blacklists as bl where bl.type='abandon' and bl.gateway_id=d.gateway_id)"
+    },
+    "selectType": "multi"
+}

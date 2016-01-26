@@ -1,0 +1,327 @@
+@import 'api_def';
+@import 'api_fun';
+
+.cw(@w, @width) {
+  @cw: @w / 2880 * @width + 0px
+}
+
+.cwv(@w, @width) {
+  @cwv: @w / 2880 * @width
+}
+
+.cwvs(@w, @width) {
+  @cwvs: @w / @mobile-max-width * @width
+}
+
+body {
+  font-family: 'helvetica neue','helvetica','Arial','Microsoft YaHei';
+}
+
+.responsive(@width) {
+  body.pc {
+    background: url('../../../index.php/responsive/size/@{width}/signin-bg.jpg') no-repeat top center;
+    .container {
+      width: 2726 / 2880 * @width + 0px;
+      .cw(30, @width);
+      padding-top: @cw;
+      header {
+        h1 {
+          padding-top: 335 / 2880 * @width + 0px;
+          padding-left: 60 / 2880 * @width + 0px;
+          margin: 0px;
+          font-size: 87 / 2880 * @width + 0px;
+          color: #fff;
+          span {
+            display: block;
+            font-size: 94 / 2880 * @width + 0px;
+            padding-bottom: 50 / 2880 * @width + 0px;
+          }
+        }
+        .cw(140, @width);
+        margin-bottom: @cw;
+      }
+      section {
+        padding-bottom: 60 / 2880 * @width + 0px;
+        ul#buttons {
+          overflow: hidden;
+          li {
+            a {
+              text-align: center;
+              display: inline-block;
+              .cw(640, @width);
+              width: @cw;
+              height: 360 / 2880 * @width + 0px;
+              color: #fff;
+              font-size: 45 / 2880 * @width + 0px;
+              padding-top: 250 / 2880 * @width + 0px;
+              text-decoration: none;
+            }
+
+            .cwv(640, @width);
+            a#merchant_description:hover {
+              background: url('../../../index.php/responsive/size/@{cwv}/signin-merchant-description-active.png');
+            }
+            a#merchant_activities:hover {
+              background: url('../../../index.php/responsive/size/@{cwv}/signin-merchant-activities-active.png');
+            }
+            a#let_me_online:hover {
+              background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online-active.png');
+            }
+
+            a#merchant_description {
+              background: url('../../../index.php/responsive/size/@{cwv}/signin-merchant-description.png');
+            }
+            a#merchant_activities {
+              background: url('../../../index.php/responsive/size/@{cwv}/signin-merchant-activities.png');
+            }
+            a#let_me_online {
+              background: url('../../../index.php/responsive/size/@{cwv}/signin-let-me-online.png');
+            }
+          }
+        }
+      }
+    }
+    footer {
+      position: relative;
+      margin: 0px auto;
+      bottom: 0;
+      width: 2726 / 2880 * @width + 0px - 30;
+      #legal {
+        .cw(30, @width);
+        font-size: @cw;
+        text-align: right;
+        color: rgba(255, 255, 255, 0.5);
+        padding-bottom: 10 / 2880 * @width + 0px;
+        a {
+          padding-left: 10 / 2880 * @width + 0px;
+          padding-right: 10 / 2880 * @width + 0px;
+          figure {
+            display: inline-block;
+          }
+        }
+      }
+      #ads {
+        a {
+          padding: 0px;
+          display: block;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile_responsive(@width) {
+  body.mobile{
+    background: url('../../../index.php/responsive/size/@{width}/signin-bg.jpg') no-repeat top center;
+    .container {
+      // width: 685 / @mobile-max-width * @width + 0px;
+      padding-top: 18 / @mobile-max-width * @width + 0px;
+      header {
+        h1 {
+          padding-top: 55 / @mobile-max-width * @width + 0px;
+          padding-left: 0;
+          margin: 0px;
+          font-size: 33 / @mobile-max-width * @width + 0px;
+          color: #fff;
+          span {
+            display: block;
+            font-size: 36  / @mobile-max-width * @width + 0px;
+            padding-bottom: 17 / @mobile-max-width * @width + 0px;
+          }
+        }
+        margin-bottom: 0px;
+        padding-bottom: 139 / @mobile-max-width * @width + 0px;
+      }
+      section {
+        ul#buttons {
+          overflow: hidden;
+          #left_button {
+            padding-right: 5 / @mobile-max-width * @width + 0px;
+          }
+          #right_button {
+            padding-left: 5px;
+          }
+          li {
+            a {
+              text-align: center;
+              display: inline-block;
+              width: (190 / @mobile-max-width) * @width + 0px;
+              height: (210 / @mobile-max-width) * @width + 0px;
+              color: #fff;
+              font-size: (21 / @mobile-max-width) * @width + 0px;
+              padding-top: (155 / @mobile-max-width) * @width + 0px;
+              text-decoration: none;
+            }
+
+            .cwvs(190, @width);
+            a#merchant_description:hover {
+              background: url('../../../index.php/responsive/size/@{cwvs}/signin-merchant-description-mobile-active.png');
+            }
+            a#merchant_activities:hover {
+              background: url('../../../index.php/responsive/size/@{cwvs}/signin-merchant-activities-mobile-active.png');
+            }
+            a#let_me_online:hover {
+              background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-mobile-active.png');
+            }
+
+            a#merchant_description {
+              background: url('../../../index.php/responsive/size/@{cwvs}/signin-merchant-description-mobile.png');
+            }
+            a#merchant_activities {
+              background: url('../../../index.php/responsive/size/@{cwvs}/signin-merchant-activities-mobile.png');
+            }
+            a#let_me_online {
+              background: url('../../../index.php/responsive/size/@{cwvs}/signin-let-me-online-mobile.png');
+            }
+          }
+        }
+      }
+    }
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0px;
+      #legal {
+        font-size: (16 / @mobile-max-width) * @width + 0px;
+        color: #fff;
+        text-align: right;
+        color: rgba(255, 255, 255, 0.5);
+        padding-bottom: (10 / @mobile-max-width) * @width + 0px;
+        padding-right: 20 / @mobile-max-width * @width + 0px;
+        margin-right: 0;
+        a {
+          padding-left: (10 / @mobile-max-width) * @width + 0px;
+          padding-right: 10 / @mobile-max-width * @width + 0px;
+          figure {
+            display: inline-block;
+          }
+        }
+      }
+      #ads {
+        padding: 0px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .mobile_responsive(320);
+  .container {
+    section {
+      .row {
+        ul#buttons {
+          li#left_button {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .mobile_responsive(480);
+}
+
+@media (min-width: 481px) {
+  body.mobile{
+    background: url('../../../index.php/responsive/size/640/signin-bg.jpg') no-repeat;
+  }
+}
+
+@media (min-height: 1px) {
+  body.mobile{
+    background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+  }
+}
+
+@media (min-width: 640px) {
+  .mobile_responsive(640);
+}
+
+@media (min-width: 641px) {
+  body.mobile{
+    background: url('../../../index.php/responsive/size/720/signin-bg.jpg') no-repeat;
+  }
+}
+
+@media (min-height: 1px) {
+  body.mobile{
+    background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+  }
+}
+
+@media (min-width: 720px) {
+  .mobile_responsive(720);
+}
+
+@media (min-width: 721px) {
+  body.mobile{
+    background: url('../../../index.php/responsive/size/1280/signin-bg.jpg') no-repeat;
+  }
+}
+
+@media (min-height: 1px) {
+  body.mobile{
+    background: url('../../../index.php/responsive/size/1800/signin-bg.jpg') no-repeat;
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive(1280);
+  body.pc {
+    .container {
+      section {
+        padding-bottom: 52px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1281px) {
+  body.pc{
+    background: url('../../../index.php/responsive/size/1440/signin-bg.jpg') no-repeat top center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .responsive(1440);
+  body.pc {
+    .container {
+      section {
+        padding-bottom: 183px;
+      }
+      header {
+        h1 {
+          padding-left: 0 / 2880 * 1280 + 0px;
+          padding-top: 300 / 2880 * 1440 + 0px;
+          span {
+            padding-bottom: 36 / 2880 * 1440 + 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  body.pc{
+    background: url('../../../index.php/responsive/size/1920/signin-bg.jpg') no-repeat top center;
+  }
+}
+
+@media (min-width: 1920px) {
+  .responsive(1920);
+}
+
+@media (min-width: 1921px) {
+  body.pc {
+    background: url('../../../index.php/responsive/size/normal/signin-bg.jpg') no-repeat top center;
+  }
+}

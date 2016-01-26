@@ -1,0 +1,41 @@
+.form_res(@width) {
+	@line-height: 60px / 2880 * @width;
+	.form-horizontal {
+		.form-group {
+			margin: 0;
+			div {
+				position: relative;
+				padding: 0;
+			}
+			.help-block {
+				display: inline-block;
+				float: right;
+				position: absolute;
+				top: -20px;
+				right: 0;
+				margin: 0;
+			}
+		}
+		label.control-label {
+			text-align: left;
+			line-height: 60px / 2880 * @width;
+			color: #6f767e;
+			font-size: 22px / 2880 * @width;
+		}
+		input.form-control {
+			height: 80px / 2880 * @width;
+			font-size: 20px / 2880 * @width;
+		}	
+	}	
+}
+
+.form-input_res(@screen-width) {
+	input.form-control {
+		border-color: #e6e6e7;
+		color: #e6e6e7;
+		&:focus {
+			border-color: @pinet-green; 
+			.box-shadow(none);
+		}
+	}
+}

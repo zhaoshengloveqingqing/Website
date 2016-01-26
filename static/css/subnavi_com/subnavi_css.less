@@ -1,0 +1,84 @@
+@import 'subnavi_def';
+@import 'subnavi_fun';
+
+.subnavi_res(@screen-width) {
+	ul.subnavi.parent {
+		display: block;
+		border:1px solid transparent;
+		border-radius: 7px;
+		h3 {
+			color: #2c3e50;
+			.res(font-size, 26px);
+			.res(height, 93px);
+			background: #ffffff;
+			margin: 0;
+			text-indent: 29px;
+			.res(line-height, 93px);
+			a {
+				color: #2c3e50;
+				.res(font-size, 26px);				
+			}
+		}
+		> li {
+			display: block;
+			> ul.subnavi.parent {
+				border: 0;
+				border-radius: 0;
+				li {
+					ul.subnavi {
+						li {
+							background: #fafafa;
+							border-bottom: 1px solid #eaeaea;
+							text-indent: 29px;
+							.res-height(93px);
+							a {
+								color: #aab2b9;
+								.res(font-size, 26px);
+							}
+							&:hover {
+								background: #ffffff;
+							}
+						}	
+					}
+					&:first-child {
+						ul.subnavi {
+							li {
+								border-top: 1px solid #eaeaea;
+							}	
+						}
+					}
+				}
+			}
+
+			&:first-child {
+				h3 {
+					border-top:1px solid transparent;
+					.border-top-radius(7px);					
+				}
+			}
+
+			&:last-child {
+				> ul.subnavi.parent {
+					> li:last-child {
+						> ul.subnavi {
+							> li {
+								border-bottom:1px solid transparent;								
+							}
+							> li:last-child {
+								border-bottom:1px solid transparent;
+								.border-bottom-radius(7px);
+							}	
+						}
+					}
+				}				
+			}
+			&.active {
+				h3 {
+					a {
+						color: #6f767e;
+					}
+				}
+			}					
+		} 
+	}
+}
